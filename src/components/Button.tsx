@@ -1,4 +1,5 @@
 import { route } from 'preact-router'
+import { createPath } from '../utils/routing'
 
 interface ButtonProps {
   children: any
@@ -30,7 +31,7 @@ export function Button({
     }
     
     return (
-      <a href={href} class={classes} onClick={handleClick}>
+      <a href={createPath(href)} class={classes} onClick={handleClick}>
         {children}
       </a>
     )

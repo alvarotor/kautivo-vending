@@ -179,6 +179,21 @@ p {
   transform: translateY(0);
 }
 
+/* Ensure home page hero content is visible immediately */
+.hero .fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Show content by default after a brief delay to prevent flash */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: none;
+  }
+}
+
 /* Home page styles */
 .hero {
   background: linear-gradient(135deg, var(--color-light-gray) 0%, var(--color-white) 100%);

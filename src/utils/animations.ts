@@ -13,9 +13,19 @@ export function initializeAnimations() {
   }, observerOptions)
 
   // Observe all elements with fade-in class
-  document.querySelectorAll('.fade-in').forEach(el => {
+  const fadeInElements = document.querySelectorAll('.fade-in')
+  fadeInElements.forEach(el => {
     observer.observe(el)
   })
+
+  // Fallback: Show all fade-in elements if they're still hidden after 2 seconds
+  setTimeout(() => {
+    fadeInElements.forEach(el => {
+      if (!el.classList.contains('visible')) {
+        el.classList.add('visible')
+      }
+    })
+  }, 2000)
 
   // Smooth scroll for anchor links
   document.addEventListener('click', (e) => {
