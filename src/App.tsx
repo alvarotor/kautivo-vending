@@ -10,11 +10,8 @@ import { Testimonials } from './pages/Testimonials'
 import { Contact } from './pages/Contact'
 import { initializeAnimations } from './utils/animations'
 import { I18nProvider } from './utils/i18n'
-import { getBasePath } from './utils/routing'
 
 export function App() {
-  const basePath = getBasePath()
-  
   const handleRouteChange = () => {
     // Re-initialize animations when route changes with longer delay
     setTimeout(() => {
@@ -37,19 +34,12 @@ export function App() {
         <Header />
         <main>
           <Router onChange={handleRouteChange}>
-            <Route path={`${basePath}/`} component={Home} />
-            <Route path={`${basePath}/about`} component={About} />
-            <Route path={`${basePath}/products`} component={Products} />
-            <Route path={`${basePath}/benefits`} component={Benefits} />
-            <Route path={`${basePath}/testimonials`} component={Testimonials} />
-            <Route path={`${basePath}/contact`} component={Contact} />
-            {/* Fallback route for development */}
-            {!basePath && <Route path="/" component={Home} />}
-            {!basePath && <Route path="/about" component={About} />}
-            {!basePath && <Route path="/products" component={Products} />}
-            {!basePath && <Route path="/benefits" component={Benefits} />}
-            {!basePath && <Route path="/testimonials" component={Testimonials} />}
-            {!basePath && <Route path="/contact" component={Contact} />}
+            <Route path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/products" component={Products} />
+            <Route path="/benefits" component={Benefits} />
+            <Route path="/testimonials" component={Testimonials} />
+            <Route path="/contact" component={Contact} />
           </Router>
         </main>
         <Footer />

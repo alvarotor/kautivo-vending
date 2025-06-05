@@ -1,4 +1,6 @@
-// Get the base path for the current environment
+// This file contains routing utilities for the Kautivo Vending app
+// The base path is now handled by Vite's base configuration and GitHub Pages SPA redirect scripts
+
 export function getBasePath(): string {
   // In production (GitHub Pages), use the repository name as base path
   if (import.meta.env.PROD) {
@@ -6,20 +8,4 @@ export function getBasePath(): string {
   }
   // In development, no base path needed
   return ''
-}
-
-// Create a full path including base path
-export function createPath(path: string): string {
-  const basePath = getBasePath()
-  // Ensure path starts with /
-  const normalizedPath = path.startsWith('/') ? path : `/${path}`
-  return `${basePath}${normalizedPath}`
-}
-
-// Navigate to a path with proper base path handling
-export function navigateToPath(path: string): void {
-  const fullPath = createPath(path)
-  window.history.pushState({}, '', fullPath)
-  // Trigger a popstate event to update the router
-  window.dispatchEvent(new PopStateEvent('popstate'))
 }
