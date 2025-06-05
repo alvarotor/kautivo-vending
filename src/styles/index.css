@@ -181,6 +181,12 @@ p {
 
 /* Ensure home page hero content is visible immediately */
 .hero .fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Show content by default if JavaScript doesn't load */
+.no-js .fade-in {
   opacity: 1;
   transform: translateY(0);
 }

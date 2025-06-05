@@ -1,4 +1,4 @@
-import { route } from 'preact-router'
+import { createPath, navigateTo } from '../utils/routing'
 
 interface ButtonProps {
   children: any
@@ -26,11 +26,11 @@ export function Button({
   if (href) {
     const handleClick = (e: Event) => {
       e.preventDefault()
-      route(href)
+      navigateTo(href)
     }
     
     return (
-      <a href={href} class={classes} onClick={handleClick}>
+      <a href={createPath(href)} class={classes} onClick={handleClick}>
         {children}
       </a>
     )

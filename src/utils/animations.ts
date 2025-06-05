@@ -1,4 +1,10 @@
 export function initializeAnimations() {
+  // Immediately show hero content to prevent blank page
+  const heroElements = document.querySelectorAll('.hero .fade-in')
+  heroElements.forEach(el => {
+    el.classList.add('visible')
+  })
+
   const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -15,17 +21,20 @@ export function initializeAnimations() {
   // Observe all elements with fade-in class
   const fadeInElements = document.querySelectorAll('.fade-in')
   fadeInElements.forEach(el => {
-    observer.observe(el)
+    // Skip hero elements as they're already visible
+    if (!el.closest('.hero')) {
+      observer.observe(el)
+    }
   })
 
-  // Fallback: Show all fade-in elements if they're still hidden after 2 seconds
+  // Fallback: Show all fade-in elements if they're still hidden after 1 second
   setTimeout(() => {
     fadeInElements.forEach(el => {
       if (!el.classList.contains('visible')) {
         el.classList.add('visible')
       }
     })
-  }, 2000)
+  }, 1000)
 
   // Smooth scroll for anchor links
   document.addEventListener('click', (e) => {

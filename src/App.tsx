@@ -20,10 +20,13 @@ export function App() {
   }
 
   useEffect(() => {
-    // Initialize animations after component mounts and DOM is ready
+    // Initialize animations immediately
+    initializeAnimations()
+    
+    // Also call again after a short delay to catch any dynamically loaded content
     const timer = setTimeout(() => {
       initializeAnimations()
-    }, 500)
+    }, 100)
     
     return () => clearTimeout(timer)
   }, [])
