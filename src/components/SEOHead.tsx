@@ -44,22 +44,22 @@ export function SEOHead({
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          "name": "Kautivo",
-          "url": url,
-          "description": description,
-          "logo": `${url}/images/kautivo-logo.png`,
-          "contactPoint": {
+          name: "Kautivo",
+          url,
+          description,
+          logo: `${url}/images/kautivo-logo.png`,
+          contactPoint: {
             "@type": "ContactPoint",
-            "telephone": "+1-555-123-4567",
-            "contactType": "customer service",
-            "email": "info@kautivo.com",
-            "availableLanguage": ["English", "Spanish", "French", "German"]
+            telephone: "+1-555-123-4567",
+            contactType: "customer service",
+            email: "info@kautivo.com",
+            availableLanguage: ["English", "Spanish", "French", "German"]
           },
-          "address": {
+          address: {
             "@type": "PostalAddress",
-            "addressCountry": "US"
+            addressCountry: "US"
           },
-          "sameAs": [
+          sameAs: [
             "https://linkedin.com/company/kautivo",
             "https://twitter.com/kautivo",
             "https://facebook.com/kautivo"

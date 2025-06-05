@@ -213,7 +213,7 @@ export function ContactForm() {
     <div class="contact-form">
       <div class="form-progress">
         <div class="progress-bar">
-          <div class="progress-fill" style={{ width: `${(currentStep / 3) * 100}%` }}></div>
+          <div class="progress-fill" style={{ width: `${(currentStep / 3) * 100}%` }} />
         </div>
         <div class="progress-steps">
           <span class={currentStep >= 1 ? 'active' : ''}>{t('contactForm.progress.step1')}</span>

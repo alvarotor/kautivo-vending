@@ -56,9 +56,9 @@ export function ROICalculator() {
   ]
 
   const calculateROI = () => {
-    const visitors = parseInt(formData.monthlyVisitors.split('-')[1] || formData.monthlyVisitors.replace('+', ''))
-    const spend = parseInt(formData.averageSpend.split('-')[1] || formData.averageSpend.replace('+', ''))
-    const current = parseInt(formData.currentRevenue) || 0
+    const visitors = parseInt(formData.monthlyVisitors.split('-')[1] || formData.monthlyVisitors.replace('+', ''), 10)
+    const spend = parseInt(formData.averageSpend.split('-')[1] || formData.averageSpend.replace('+', ''), 10)
+    const current = parseInt(formData.currentRevenue, 10) || 0
     
     const estimatedMonthlyRevenue = Math.round(visitors * 0.15 * spend)
     const annualRevenue = estimatedMonthlyRevenue * 12

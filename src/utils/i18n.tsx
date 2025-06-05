@@ -6,8 +6,8 @@ type Language = 'en' | 'es'
 
 interface I18nContextType {
   language: Language
-  setLanguage: (lang: Language) => void
-  t: (key: string) => string
+  setLanguage: (_: Language) => void
+  t: (_: string) => string
 }
 
 const I18nContext = createContext<I18nContextType | undefined>(undefined)

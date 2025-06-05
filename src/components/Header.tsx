@@ -41,9 +41,9 @@ export function Header() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
-            <span></span>
-            <span></span>
-            <span></span>
+            <span />
+            <span />
+            <span />
           </button>
         </nav>
       </div>

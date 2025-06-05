@@ -3,7 +3,7 @@ interface FormFieldProps {
   type?: string
   name: string
   value: string
-  onChange: (value: string) => void
+  onChange: (_: string) => void
   required?: boolean
   placeholder?: string
   error?: string
