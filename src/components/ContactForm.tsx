@@ -1,6 +1,7 @@
 import { useState } from 'preact/hooks'
 import { FormField } from './FormField'
 import { Button } from './Button'
+import { useI18n } from '../utils/i18n'
 
 interface ContactFormData {
   fullName: string
@@ -17,6 +18,7 @@ interface ContactFormData {
 }
 
 export function ContactForm() {
+  const { t } = useI18n()
   const [currentStep, setCurrentStep] = useState(1)
   const [formData, setFormData] = useState<ContactFormData>({
     fullName: '',
@@ -36,34 +38,34 @@ export function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false)
 
   const businessTypes = [
-    { value: 'fitness-center', label: 'Fitness Center/Gym' },
-    { value: 'yoga-studio', label: 'Yoga/Pilates Studio' },
-    { value: 'spa', label: 'Spa/Wellness Center' },
-    { value: 'pool', label: 'Swimming Pool/Aquatics Center' },
-    { value: 'rehabilitation', label: 'Rehabilitation Clinic' },
-    { value: 'coworking', label: 'Coworking Space' },
-    { value: 'other', label: 'Other' }
+    { value: 'fitness-center', label: t('contactForm.businessTypes.fitnessCenter') },
+    { value: 'yoga-studio', label: t('contactForm.businessTypes.yogaStudio') },
+    { value: 'spa', label: t('contactForm.businessTypes.spa') },
+    { value: 'pool', label: t('contactForm.businessTypes.pool') },
+    { value: 'rehabilitation', label: t('contactForm.businessTypes.rehabilitation') },
+    { value: 'coworking', label: t('contactForm.businessTypes.coworking') },
+    { value: 'other', label: t('contactForm.businessTypes.other') }
   ]
 
   const visitorRanges = [
-    { value: '0-500', label: '0-500 monthly visitors' },
-    { value: '500-1000', label: '500-1,000 monthly visitors' },
-    { value: '1000-2000', label: '1,000-2,000 monthly visitors' },
-    { value: '2000-5000', label: '2,000-5,000 monthly visitors' },
-    { value: '5000+', label: '5,000+ monthly visitors' }
+    { value: '0-500', label: t('contactForm.visitorRanges.range1') },
+    { value: '500-1000', label: t('contactForm.visitorRanges.range2') },
+    { value: '1000-2000', label: t('contactForm.visitorRanges.range3') },
+    { value: '2000-5000', label: t('contactForm.visitorRanges.range4') },
+    { value: '5000+', label: t('contactForm.visitorRanges.range5') }
   ]
 
   const contactMethods = [
-    { value: 'email', label: 'Email' },
-    { value: 'phone', label: 'Phone Call' },
-    { value: 'either', label: 'Either Email or Phone' }
+    { value: 'email', label: t('contactForm.contactMethods.email') },
+    { value: 'phone', label: t('contactForm.contactMethods.phone') },
+    { value: 'either', label: t('contactForm.contactMethods.either') }
   ]
 
   const bestTimes = [
-    { value: 'morning', label: 'Morning (9 AM - 12 PM)' },
-    { value: 'afternoon', label: 'Afternoon (12 PM - 5 PM)' },
-    { value: 'evening', label: 'Evening (5 PM - 8 PM)' },
-    { value: 'anytime', label: 'Anytime' }
+    { value: 'morning', label: t('contactForm.bestTimes.morning') },
+    { value: 'afternoon', label: t('contactForm.bestTimes.afternoon') },
+    { value: 'evening', label: t('contactForm.bestTimes.evening') },
+    { value: 'anytime', label: t('contactForm.bestTimes.anytime') }
   ]
 
   const updateFormData = (field: keyof ContactFormData) => (value: string | boolean) => {
@@ -77,23 +79,23 @@ export function ContactForm() {
     const newErrors: Record<string, string> = {}
 
     if (step === 1) {
-      if (!formData.fullName.trim()) newErrors.fullName = 'Full name is required'
-      if (!formData.email.trim()) newErrors.email = 'Email is required'
-      else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Please enter a valid email'
-      if (!formData.phone.trim()) newErrors.phone = 'Phone number is required'
-      if (!formData.company.trim()) newErrors.company = 'Company/Facility name is required'
+      if (!formData.fullName.trim()) newErrors.fullName = t('contactForm.validation.fullNameRequired')
+      if (!formData.email.trim()) newErrors.email = t('contactForm.validation.emailRequired')
+      else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = t('contactForm.validation.validEmail')
+      if (!formData.phone.trim()) newErrors.phone = t('contactForm.validation.phoneRequired')
+      if (!formData.company.trim()) newErrors.company = t('contactForm.validation.companyRequired')
     }
 
     if (step === 2) {
-      if (!formData.businessType) newErrors.businessType = 'Please select your business type'
-      if (!formData.monthlyVisitors) newErrors.monthlyVisitors = 'Please select visitor count'
-      if (!formData.currentVending) newErrors.currentVending = 'Please indicate current vending status'
+      if (!formData.businessType) newErrors.businessType = t('contactForm.validation.businessTypeRequired')
+      if (!formData.monthlyVisitors) newErrors.monthlyVisitors = t('contactForm.validation.visitorsRequired')
+      if (!formData.currentVending) newErrors.currentVending = t('contactForm.validation.vendingRequired')
     }
 
     if (step === 3) {
-      if (!formData.contactMethod) newErrors.contactMethod = 'Please select preferred contact method'
-      if (!formData.bestTime) newErrors.bestTime = 'Please select best time to contact'
-      if (!formData.termsAgreed) newErrors.termsAgreed = 'You must agree to the terms to continue'
+      if (!formData.contactMethod) newErrors.contactMethod = t('contactForm.validation.contactMethodRequired')
+      if (!formData.bestTime) newErrors.bestTime = t('contactForm.validation.bestTimeRequired')
+      if (!formData.termsAgreed) newErrors.termsAgreed = t('contactForm.validation.termsRequired')
     }
 
     setErrors(newErrors)
@@ -133,21 +135,20 @@ export function ContactForm() {
       <div class="form-success">
         <div class="success-content">
           <div class="success-icon">✅</div>
-          <h3>Thank You for Your Interest!</h3>
+          <h3>{t('contactForm.success.title')}</h3>
           <p>
-            Your consultation request has been received. Our team will review your information 
-            and contact you within 24 hours to schedule your free consultation.
+            {t('contactForm.success.message')}
           </p>
           <p class="response-time">
-            <strong>Expected Response Time:</strong> Within 24 hours during business days
+            <strong>{t('contactForm.success.responseTime')}</strong> {t('contactForm.success.responseValue')}
           </p>
           <div class="next-steps">
-            <h4>What happens next?</h4>
+            <h4>{t('contactForm.success.nextStepsTitle')}</h4>
             <ul>
-              <li>Our wellness vending specialist will review your facility details</li>
-              <li>We'll prepare a customized recommendation based on your needs</li>
-              <li>You'll receive a call or email to schedule your consultation</li>
-              <li>We'll provide ROI projections specific to your facility</li>
+              <li>{t('contactForm.success.nextSteps.0')}</li>
+              <li>{t('contactForm.success.nextSteps.1')}</li>
+              <li>{t('contactForm.success.nextSteps.2')}</li>
+              <li>{t('contactForm.success.nextSteps.3')}</li>
             </ul>
           </div>
         </div>
@@ -215,18 +216,18 @@ export function ContactForm() {
           <div class="progress-fill" style={{ width: `${(currentStep / 3) * 100}%` }}></div>
         </div>
         <div class="progress-steps">
-          <span class={currentStep >= 1 ? 'active' : ''}>1. Contact Info</span>
-          <span class={currentStep >= 2 ? 'active' : ''}>2. Business Details</span>
-          <span class={currentStep >= 3 ? 'active' : ''}>3. Preferences</span>
+          <span class={currentStep >= 1 ? 'active' : ''}>{t('contactForm.progress.step1')}</span>
+          <span class={currentStep >= 2 ? 'active' : ''}>{t('contactForm.progress.step2')}</span>
+          <span class={currentStep >= 3 ? 'active' : ''}>{t('contactForm.progress.step3')}</span>
         </div>
       </div>
 
       <form onSubmit={handleSubmit}>
         {currentStep === 1 && (
           <div class="form-step">
-            <h3>Contact Information</h3>
+            <h3>{t('contactForm.step1.title')}</h3>
             <FormField
-              label="Full Name"
+              label={t('contactForm.step1.fullName')}
               name="fullName"
               value={formData.fullName}
               onChange={updateFormData('fullName')}
@@ -235,7 +236,7 @@ export function ContactForm() {
             />
             
             <FormField
-              label="Business Email"
+              label={t('contactForm.step1.businessEmail')}
               type="email"
               name="email"
               value={formData.email}
@@ -245,18 +246,18 @@ export function ContactForm() {
             />
             
             <FormField
-              label="Phone Number"
+              label={t('contactForm.step1.phoneNumber')}
               type="tel"
               name="phone"
               value={formData.phone}
               onChange={updateFormData('phone')}
-              placeholder="(555) 123-4567"
+              placeholder={t('contactForm.step1.phonePlaceholder')}
               required
               error={errors.phone}
             />
             
             <FormField
-              label="Company/Facility Name"
+              label={t('contactForm.step1.companyName')}
               name="company"
               value={formData.company}
               onChange={updateFormData('company')}
@@ -268,9 +269,9 @@ export function ContactForm() {
 
         {currentStep === 2 && (
           <div class="form-step">
-            <h3>Business Details</h3>
+            <h3>{t('contactForm.step2.title')}</h3>
             <FormField
-              label="Business Type"
+              label={t('contactForm.step2.businessType')}
               type="select"
               name="businessType"
               value={formData.businessType}
@@ -281,7 +282,7 @@ export function ContactForm() {
             />
             
             <FormField
-              label="Monthly Visitor Count"
+              label={t('contactForm.step2.monthlyVisitors')}
               type="select"
               name="monthlyVisitors"
               value={formData.monthlyVisitors}
@@ -293,7 +294,7 @@ export function ContactForm() {
             
             <div class="form-field">
               <label class="form-label">
-                Do you currently have vending machines? <span class="required">*</span>
+                {t('contactForm.step2.currentVending')} <span class="required">*</span>
               </label>
               <div class="radio-group">
                 <label class="radio-option">
@@ -304,7 +305,7 @@ export function ContactForm() {
                     checked={formData.currentVending === 'yes'}
                     onChange={(e) => updateFormData('currentVending')((e.target as HTMLInputElement).value)}
                   />
-                  Yes
+                  {t('contactForm.step2.yes')}
                 </label>
                 <label class="radio-option">
                   <input
@@ -314,7 +315,7 @@ export function ContactForm() {
                     checked={formData.currentVending === 'no'}
                     onChange={(e) => updateFormData('currentVending')((e.target as HTMLInputElement).value)}
                   />
-                  No
+                  {t('contactForm.step2.no')}
                 </label>
               </div>
               {errors.currentVending && <span class="form-error">{errors.currentVending}</span>}
@@ -324,9 +325,9 @@ export function ContactForm() {
 
         {currentStep === 3 && (
           <div class="form-step">
-            <h3>Contact Preferences</h3>
+            <h3>{t('contactForm.step3.title')}</h3>
             <FormField
-              label="Preferred Contact Method"
+              label={t('contactForm.step3.contactMethod')}
               type="select"
               name="contactMethod"
               value={formData.contactMethod}
@@ -337,7 +338,7 @@ export function ContactForm() {
             />
             
             <FormField
-              label="Best Time to Contact"
+              label={t('contactForm.step3.bestTime')}
               type="select"
               name="bestTime"
               value={formData.bestTime}
@@ -348,12 +349,12 @@ export function ContactForm() {
             />
             
             <FormField
-              label="Additional Requirements or Questions"
+              label={t('contactForm.step3.requirements')}
               type="textarea"
               name="requirements"
               value={formData.requirements}
               onChange={updateFormData('requirements')}
-              placeholder="Tell us about any specific needs, space constraints, or questions you have..."
+              placeholder={t('contactForm.step3.requirementsPlaceholder')}
               rows={4}
             />
 
@@ -364,7 +365,7 @@ export function ContactForm() {
                   checked={formData.termsAgreed}
                   onChange={(e) => updateFormData('termsAgreed')((e.target as HTMLInputElement).checked)}
                 />
-                I agree to be contacted by Kautivo regarding vending solutions and understand that my information will be used according to the privacy policy. <span class="required">*</span>
+                {t('contactForm.step3.termsAgreement')} <span class="required">*</span>
               </label>
               {errors.termsAgreed && <span class="form-error">{errors.termsAgreed}</span>}
             </div>
@@ -374,17 +375,17 @@ export function ContactForm() {
         <div class="form-actions">
           {currentStep > 1 && (
             <Button type="button" variant="secondary" onClick={prevStep}>
-              Previous
+              {t('contactForm.buttons.previous')}
             </Button>
           )}
           
           {currentStep < 3 ? (
             <Button type="button" onClick={nextStep}>
-              Next Step
+              {t('contactForm.buttons.nextStep')}
             </Button>
           ) : (
             <Button type="submit" disabled={isSubmitting}>
-              {isSubmitting ? 'Submitting...' : 'Submit Request'}
+              {isSubmitting ? t('contactForm.buttons.submitting') : t('contactForm.buttons.submitRequest')}
             </Button>
           )}
         </div>

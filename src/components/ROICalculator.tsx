@@ -1,6 +1,7 @@
 import { useState } from 'preact/hooks'
 import { FormField } from './FormField'
 import { Button } from './Button'
+import { useI18n } from '../utils/i18n'
 
 interface ROIData {
   facilityType: string
@@ -11,6 +12,7 @@ interface ROIData {
 }
 
 export function ROICalculator() {
+  const { t } = useI18n()
   const [formData, setFormData] = useState<ROIData>({
     facilityType: '',
     monthlyVisitors: '',
@@ -22,35 +24,35 @@ export function ROICalculator() {
   const [results, setResults] = useState<any>(null)
 
   const facilityTypes = [
-    { value: 'fitness-center', label: 'Fitness Center/Gym' },
-    { value: 'yoga-studio', label: 'Yoga/Pilates Studio' },
-    { value: 'spa', label: 'Spa/Wellness Center' },
-    { value: 'pool', label: 'Swimming Pool/Aquatics' },
-    { value: 'rehabilitation', label: 'Rehabilitation Clinic' },
-    { value: 'coworking', label: 'Coworking Space' }
+    { value: 'fitness-center', label: t('roiCalculator.facilityTypes.fitnessCenter') },
+    { value: 'yoga-studio', label: t('roiCalculator.facilityTypes.yogaStudio') },
+    { value: 'spa', label: t('roiCalculator.facilityTypes.spa') },
+    { value: 'pool', label: t('roiCalculator.facilityTypes.pool') },
+    { value: 'rehabilitation', label: t('roiCalculator.facilityTypes.rehabilitation') },
+    { value: 'coworking', label: t('roiCalculator.facilityTypes.coworking') }
   ]
 
   const visitorRanges = [
-    { value: '0-500', label: '0-500 visitors' },
-    { value: '500-1000', label: '500-1,000 visitors' },
-    { value: '1000-2000', label: '1,000-2,000 visitors' },
-    { value: '2000-5000', label: '2,000-5,000 visitors' },
-    { value: '5000+', label: '5,000+ visitors' }
+    { value: '0-500', label: t('roiCalculator.visitorRanges.range1') },
+    { value: '500-1000', label: t('roiCalculator.visitorRanges.range2') },
+    { value: '1000-2000', label: t('roiCalculator.visitorRanges.range3') },
+    { value: '2000-5000', label: t('roiCalculator.visitorRanges.range4') },
+    { value: '5000+', label: t('roiCalculator.visitorRanges.range5') }
   ]
 
   const spendRanges = [
-    { value: '2-4', label: '$2-4 per visit' },
-    { value: '4-6', label: '$4-6 per visit' },
-    { value: '6-8', label: '$6-8 per visit' },
-    { value: '8-12', label: '$8-12 per visit' },
-    { value: '12+', label: '$12+ per visit' }
+    { value: '2-4', label: t('roiCalculator.spendRanges.range1') },
+    { value: '4-6', label: t('roiCalculator.spendRanges.range2') },
+    { value: '6-8', label: t('roiCalculator.spendRanges.range3') },
+    { value: '8-12', label: t('roiCalculator.spendRanges.range4') },
+    { value: '12+', label: t('roiCalculator.spendRanges.range5') }
   ]
 
   const hoursRanges = [
-    { value: '8-12', label: '8-12 hours' },
-    { value: '12-16', label: '12-16 hours' },
-    { value: '16-20', label: '16-20 hours' },
-    { value: '20-24', label: '20-24 hours' }
+    { value: '8-12', label: t('roiCalculator.hoursRanges.range1') },
+    { value: '12-16', label: t('roiCalculator.hoursRanges.range2') },
+    { value: '16-20', label: t('roiCalculator.hoursRanges.range3') },
+    { value: '20-24', label: t('roiCalculator.hoursRanges.range4') }
   ]
 
   const calculateROI = () => {
@@ -90,10 +92,10 @@ export function ROICalculator() {
   return (
     <div class="roi-calculator">
       <div class="calculator-form">
-        <h3>Calculate Your Potential ROI</h3>
+        <h3>{t('roiCalculator.title')}</h3>
         <form onSubmit={handleSubmit}>
           <FormField
-            label="Facility Type"
+            label={t('roiCalculator.form.facilityType')}
             type="select"
             name="facilityType"
             value={formData.facilityType}
@@ -103,7 +105,7 @@ export function ROICalculator() {
           />
           
           <FormField
-            label="Monthly Visitors"
+            label={t('roiCalculator.form.monthlyVisitors')}
             type="select"
             name="monthlyVisitors"
             value={formData.monthlyVisitors}
@@ -113,7 +115,7 @@ export function ROICalculator() {
           />
           
           <FormField
-            label="Expected Average Spend per Customer"
+            label={t('roiCalculator.form.averageSpend')}
             type="select"
             name="averageSpend"
             value={formData.averageSpend}
@@ -123,7 +125,7 @@ export function ROICalculator() {
           />
           
           <FormField
-            label="Daily Operating Hours"
+            label={t('roiCalculator.form.operatingHours')}
             type="select"
             name="operatingHours"
             value={formData.operatingHours}
@@ -133,57 +135,57 @@ export function ROICalculator() {
           />
           
           <FormField
-            label="Current Monthly Retail Revenue (Optional)"
+            label={t('roiCalculator.form.currentRevenue')}
             type="number"
             name="currentRevenue"
             value={formData.currentRevenue}
             onChange={updateFormData('currentRevenue')}
-            placeholder="Enter current monthly revenue"
+            placeholder={t('roiCalculator.form.currentRevenuePlaceholder')}
           />
           
-          <Button type="submit" size="large">Calculate ROI</Button>
+          <Button type="submit" size="large">{t('roiCalculator.form.calculateButton')}</Button>
         </form>
       </div>
 
       {results && (
         <div class="calculator-results">
-          <h3>Your Projected Results</h3>
+          <h3>{t('roiCalculator.results.title')}</h3>
           
           <div class="results-grid">
             <div class="result-card">
               <div class="result-value">${results.monthlyRevenue.toLocaleString()}</div>
-              <div class="result-label">Estimated Monthly Revenue</div>
+              <div class="result-label">{t('roiCalculator.results.monthlyRevenue')}</div>
             </div>
             
             <div class="result-card">
               <div class="result-value">${results.annualRevenue.toLocaleString()}</div>
-              <div class="result-label">Projected Annual Revenue</div>
+              <div class="result-label">{t('roiCalculator.results.annualRevenue')}</div>
             </div>
             
             <div class="result-card">
-              <div class="result-value">{results.paybackPeriod} months</div>
-              <div class="result-label">Investment Payback Period</div>
+              <div class="result-value">{results.paybackPeriod} {t('roiCalculator.results.months')}</div>
+              <div class="result-label">{t('roiCalculator.results.paybackPeriod')}</div>
             </div>
             
             <div class="result-card">
               <div class="result-value">${results.firstYearProfit.toLocaleString()}</div>
-              <div class="result-label">First Year Net Profit</div>
+              <div class="result-label">{t('roiCalculator.results.firstYearProfit')}</div>
             </div>
           </div>
 
           <div class="assumptions">
-            <h4>Calculation Assumptions:</h4>
+            <h4>{t('roiCalculator.assumptions.title')}</h4>
             <ul>
-              <li>15% of visitors make a purchase (industry average)</li>
-              <li>Machine investment: ${results.machineInvestment.toLocaleString()}</li>
-              <li>Monthly operating costs: $200 (restocking, maintenance, processing fees)</li>
-              <li>Revenue sharing with facility: 70% facility / 30% Kautivo</li>
+              <li>{t('roiCalculator.assumptions.purchaseRate')}</li>
+              <li>{t('roiCalculator.assumptions.machineInvestment')}{results.machineInvestment.toLocaleString()}</li>
+              <li>{t('roiCalculator.assumptions.operatingCosts')}</li>
+              <li>{t('roiCalculator.assumptions.revenueSharing')}</li>
             </ul>
           </div>
 
           <div class="next-steps">
-            <p><strong>Ready to get started?</strong></p>
-            <Button href="/contact" size="large">Get Free Consultation</Button>
+            <p><strong>{t('roiCalculator.nextSteps.title')}</strong></p>
+            <Button href="/contact" size="large">{t('roiCalculator.nextSteps.button')}</Button>
           </div>
         </div>
       )}

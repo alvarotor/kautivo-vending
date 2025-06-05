@@ -1,11 +1,21 @@
+import { useI18n } from '../utils/i18n'
+import { route } from 'preact-router'
+
 export function Footer() {
+  const { t } = useI18n()
+
+  const handleNavClick = (e: Event, path: string) => {
+    e.preventDefault()
+    route(path)
+  }
+
   return (
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">
             <h4>Kautivo</h4>
-            <p>Smart vending solutions for wellness facilities worldwide.</p>
+            <p>{t('footer.tagline')}</p>
             <div class="social-links">
               <a href="#" aria-label="LinkedIn">LinkedIn</a>
               <a href="#" aria-label="Twitter">Twitter</a>
@@ -14,34 +24,34 @@ export function Footer() {
           </div>
           
           <div class="footer-section">
-            <h4>Solutions</h4>
+            <h4>{t('footer.sections.solutions')}</h4>
             <ul>
-              <li><a href="/products">Smart Vending Machines</a></li>
-              <li><a href="/benefits">ROI Calculator</a></li>
-              <li><a href="/testimonials">Case Studies</a></li>
+              <li><a href="/products" onClick={(e) => handleNavClick(e, '/products')}>{t('footer.links.vendingMachines')}</a></li>
+              <li><a href="/benefits" onClick={(e) => handleNavClick(e, '/benefits')}>{t('footer.links.roiCalculator')}</a></li>
+              <li><a href="/testimonials" onClick={(e) => handleNavClick(e, '/testimonials')}>{t('footer.links.caseStudies')}</a></li>
             </ul>
           </div>
           
           <div class="footer-section">
-            <h4>Company</h4>
+            <h4>{t('footer.sections.company')}</h4>
             <ul>
-              <li><a href="/about">About Us</a></li>
-              <li><a href="/contact">Contact</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms of Service</a></li>
+              <li><a href="/about" onClick={(e) => handleNavClick(e, '/about')}>{t('footer.links.aboutUs')}</a></li>
+              <li><a href="/contact" onClick={(e) => handleNavClick(e, '/contact')}>{t('footer.links.contact')}</a></li>
+              <li><a href="#">{t('footer.links.privacy')}</a></li>
+              <li><a href="#">{t('footer.links.terms')}</a></li>
             </ul>
           </div>
           
           <div class="footer-section">
-            <h4>Contact</h4>
-            <p>Email: info@kautivo.com</p>
-            <p>Phone: +1 (555) 123-4567</p>
-            <p>Hours: Mon-Fri 9AM-6PM EST</p>
+            <h4>{t('footer.sections.contact')}</h4>
+            <p>{t('footer.contactInfo.email')}</p>
+            <p>{t('footer.contactInfo.phone')}</p>
+            <p>{t('footer.contactInfo.hours')}</p>
           </div>
         </div>
         
         <div class="footer-bottom">
-          <p>&copy; 2024 Kautivo. All rights reserved.</p>
+          <p>{t('footer.copyright')}</p>
         </div>
       </div>
       

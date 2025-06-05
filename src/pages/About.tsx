@@ -1,13 +1,16 @@
+import { useI18n } from '../utils/i18n'
+
 export function About() {
+  const { t } = useI18n()
+  
   return (
     <div class="about">
       <section class="hero-section section">
         <div class="container">
           <div class="text-center">
-            <h1 class="fade-in">Revolutionizing Wellness Through Smart Vending</h1>
+            <h1 class="fade-in">{t('about.hero.title')}</h1>
             <p class="text-large fade-in">
-              At Kautivo, we believe that wellness facilities deserve vending solutions as thoughtful 
-              and premium as the services they provide.
+              {t('about.hero.subtitle')}
             </p>
           </div>
         </div>
@@ -17,20 +20,15 @@ export function About() {
         <div class="container">
           <div class="story-content">
             <div class="story-text fade-in">
-              <h2>Our Story</h2>
+              <h2>{t('about.story.title')}</h2>
               <p>
-                Founded in 2020 by wellness industry veterans, Kautivo emerged from a simple observation: 
-                traditional vending machines were failing to serve the unique needs of health-conscious facilities and their members.
+                {t('about.story.paragraph1')}
               </p>
               <p>
-                We saw gym-goers settling for processed snacks when they needed clean protein. We witnessed 
-                spa clients leaving empty-handed when they could have taken home premium wellness products. 
-                We recognized that facility owners were missing out on significant revenue opportunities.
+                {t('about.story.paragraph2')}
               </p>
               <p>
-                That's when we decided to build something different – vending machines designed specifically 
-                for the wellness industry, stocked with products that align with your facility's values and 
-                your members' goals.
+                {t('about.story.paragraph3')}
               </p>
             </div>
             <div class="story-image fade-in">
@@ -45,27 +43,26 @@ export function About() {
       <section class="mission-section section">
         <div class="container">
           <div class="text-center">
-            <h2 class="fade-in">Our Mission</h2>
+            <h2 class="fade-in">{t('about.mission.title')}</h2>
             <p class="text-large fade-in">
-              To empower wellness facilities with intelligent vending solutions that enhance member 
-              experience while driving sustainable revenue growth.
+              {t('about.mission.subtitle')}
             </p>
           </div>
           
           <div class="grid grid-3 fade-in">
             <div class="value-card card">
-              <h3>🎯 Purpose-Built</h3>
-              <p>Every feature designed specifically for wellness environments and health-conscious consumers.</p>
+              <h3>{t('about.mission.purposeBuilt.title')}</h3>
+              <p>{t('about.mission.purposeBuilt.description')}</p>
             </div>
             
             <div class="value-card card">
-              <h3>🤝 Partnership</h3>
-              <p>We're not just vendors – we're partners invested in your facility's long-term success.</p>
+              <h3>{t('about.mission.partnership.title')}</h3>
+              <p>{t('about.mission.partnership.description')}</p>
             </div>
             
             <div class="value-card card">
-              <h3>📈 Growth</h3>
-              <p>Helping facilities unlock new revenue streams while serving their community better.</p>
+              <h3>{t('about.mission.growth.title')}</h3>
+              <p>{t('about.mission.growth.description')}</p>
             </div>
           </div>
         </div>
@@ -74,36 +71,36 @@ export function About() {
       <section class="team-section section section-alt">
         <div class="container">
           <div class="text-center">
-            <h2 class="fade-in">Leadership Team</h2>
-            <p class="fade-in">Industry experts with deep wellness and technology backgrounds</p>
+            <h2 class="fade-in">{t('about.team.title')}</h2>
+            <p class="fade-in">{t('about.team.subtitle')}</p>
           </div>
           
           <div class="grid grid-3 fade-in">
             <div class="team-member card">
               <div class="member-image">
-                <div class="image-placeholder">Sarah Johnson</div>
+                <div class="image-placeholder">{t('about.team.sarah.name')}</div>
               </div>
-              <h3>Sarah Johnson</h3>
-              <p class="member-title">CEO & Co-Founder</p>
-              <p>15+ years in fitness industry operations and franchise management</p>
+              <h3>{t('about.team.sarah.name')}</h3>
+              <p class="member-title">{t('about.team.sarah.title')}</p>
+              <p>{t('about.team.sarah.description')}</p>
             </div>
             
             <div class="team-member card">
               <div class="member-image">
-                <div class="image-placeholder">Michael Chen</div>
+                <div class="image-placeholder">{t('about.team.michael.name')}</div>
               </div>
-              <h3>Michael Chen</h3>
-              <p class="member-title">CTO & Co-Founder</p>
-              <p>Former tech lead at major vending technology companies</p>
+              <h3>{t('about.team.michael.name')}</h3>
+              <p class="member-title">{t('about.team.michael.title')}</p>
+              <p>{t('about.team.michael.description')}</p>
             </div>
             
             <div class="team-member card">
               <div class="member-image">
-                <div class="image-placeholder">Lisa Rodriguez</div>
+                <div class="image-placeholder">{t('about.team.lisa.name')}</div>
               </div>
-              <h3>Lisa Rodriguez</h3>
-              <p class="member-title">VP of Customer Success</p>
-              <p>Wellness industry consultant with 200+ facility partnerships</p>
+              <h3>{t('about.team.lisa.name')}</h3>
+              <p class="member-title">{t('about.team.lisa.title')}</p>
+              <p>{t('about.team.lisa.description')}</p>
             </div>
           </div>
         </div>
@@ -112,23 +109,23 @@ export function About() {
       <section class="certifications-section section">
         <div class="container">
           <div class="text-center">
-            <h2 class="fade-in">Trust & Certifications</h2>
+            <h2 class="fade-in">{t('about.certifications.title')}</h2>
             <div class="certifications fade-in">
               <div class="cert-item">
-                <h4>FDA Compliant</h4>
-                <p>All food handling and storage meets FDA requirements</p>
+                <h4>{t('about.certifications.fda.title')}</h4>
+                <p>{t('about.certifications.fda.description')}</p>
               </div>
               <div class="cert-item">
-                <h4>Energy Star Certified</h4>
-                <p>Environmentally responsible and energy efficient</p>
+                <h4>{t('about.certifications.energyStar.title')}</h4>
+                <p>{t('about.certifications.energyStar.description')}</p>
               </div>
               <div class="cert-item">
-                <h4>PCI DSS Compliant</h4>
-                <p>Secure payment processing and data protection</p>
+                <h4>{t('about.certifications.pci.title')}</h4>
+                <p>{t('about.certifications.pci.description')}</p>
               </div>
               <div class="cert-item">
-                <h4>ADA Accessible</h4>
-                <p>Designed for universal accessibility</p>
+                <h4>{t('about.certifications.ada.title')}</h4>
+                <p>{t('about.certifications.ada.description')}</p>
               </div>
             </div>
           </div>

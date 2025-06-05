@@ -1,13 +1,19 @@
 import { useState } from 'preact/hooks'
 import { route } from 'preact-router'
+import { useI18n } from '../utils/i18n'
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { language, setLanguage, t } = useI18n()
 
   const handleNavClick = (e: Event, path: string) => {
     e.preventDefault()
     route(path)
     setIsMenuOpen(false)
+  }
+
+  const handleLanguageToggle = () => {
+    setLanguage(language === 'en' ? 'es' : 'en')
   }
 
   return (
@@ -19,12 +25,15 @@ export function Header() {
           </a>
           
           <div class={`nav-links ${isMenuOpen ? 'nav-links-open' : ''}`}>
-            <a href="/" class="nav-link" onClick={(e) => handleNavClick(e, '/')}>Home</a>
-            <a href="/about" class="nav-link" onClick={(e) => handleNavClick(e, '/about')}>About</a>
-            <a href="/products" class="nav-link" onClick={(e) => handleNavClick(e, '/products')}>Products</a>
-            <a href="/benefits" class="nav-link" onClick={(e) => handleNavClick(e, '/benefits')}>Benefits</a>
-            <a href="/testimonials" class="nav-link" onClick={(e) => handleNavClick(e, '/testimonials')}>Testimonials</a>
-            <a href="/contact" class="nav-link nav-link-cta" onClick={(e) => handleNavClick(e, '/contact')}>Contact</a>
+            <a href="/" class="nav-link" onClick={(e) => handleNavClick(e, '/')}>{t('nav.home')}</a>
+            <a href="/about" class="nav-link" onClick={(e) => handleNavClick(e, '/about')}>{t('nav.about')}</a>
+            <a href="/products" class="nav-link" onClick={(e) => handleNavClick(e, '/products')}>{t('nav.products')}</a>
+            <a href="/benefits" class="nav-link" onClick={(e) => handleNavClick(e, '/benefits')}>{t('nav.benefits')}</a>
+            <a href="/testimonials" class="nav-link" onClick={(e) => handleNavClick(e, '/testimonials')}>{t('nav.testimonials')}</a>
+            <a href="/contact" class="nav-link nav-link-cta" onClick={(e) => handleNavClick(e, '/contact')}>{t('nav.contact')}</a>
+            <button class="language-toggle" onClick={handleLanguageToggle} title={t('common.language')}>
+              {language.toUpperCase()}
+            </button>
           </div>
           
           <button 

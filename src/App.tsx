@@ -9,6 +9,7 @@ import { Benefits } from './pages/Benefits'
 import { Testimonials } from './pages/Testimonials'
 import { Contact } from './pages/Contact'
 import { initializeAnimations } from './utils/animations'
+import { I18nProvider } from './utils/i18n'
 
 export function App() {
   const handleRouteChange = () => {
@@ -23,19 +24,21 @@ export function App() {
   }, [])
 
   return (
-    <div class="app">
-      <Header />
-      <main>
-        <Router onChange={handleRouteChange}>
-          <Route path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/products" component={Products} />
-          <Route path="/benefits" component={Benefits} />
-          <Route path="/testimonials" component={Testimonials} />
-          <Route path="/contact" component={Contact} />
-        </Router>
-      </main>
-      <Footer />
-    </div>
+    <I18nProvider>
+      <div class="app">
+        <Header />
+        <main>
+          <Router onChange={handleRouteChange}>
+            <Route path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/products" component={Products} />
+            <Route path="/benefits" component={Benefits} />
+            <Route path="/testimonials" component={Testimonials} />
+            <Route path="/contact" component={Contact} />
+          </Router>
+        </main>
+        <Footer />
+      </div>
+    </I18nProvider>
   )
 }

@@ -1,22 +1,61 @@
 import { useState } from 'preact/hooks'
 import { Button } from '../components/Button'
+import { useI18n } from '../utils/i18n'
 import testimonialsData from '../data/testimonials.json'
+import translations from '../data/translations.json'
 
 export function Testimonials() {
-  const [selectedTestimonial, setSelectedTestimonial] = useState(testimonialsData[0])
+  const [selectedTestimonialId, setSelectedTestimonialId] = useState(testimonialsData[0].id)
   const [filter, setFilter] = useState('all')
+  const { t, language } = useI18n()
+
+  const getTranslatedTestimonial = (testimonialId: string) => {
+    const originalTestimonial = testimonialsData.find(t => t.id === testimonialId)!
+    
+    // Convert kebab-case to camelCase: "elite-fitness" to "eliteFitness"
+    const testimonialKey = testimonialId.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase())
+    
+    try {
+      const testimonialTranslations = translations[language]?.testimonials?.testimonialData?.[testimonialKey]
+      
+      if (testimonialTranslations && typeof testimonialTranslations === 'object') {
+        return {
+          ...originalTestimonial,
+          facilityType: testimonialTranslations.facilityType || originalTestimonial.facilityType,
+          memberCount: testimonialTranslations.memberCount || originalTestimonial.memberCount,
+          quote: testimonialTranslations.quote || originalTestimonial.quote,
+          highlights: Array.isArray(testimonialTranslations.highlights) ? testimonialTranslations.highlights : originalTestimonial.highlights,
+          beforeAfter: testimonialTranslations.beforeAfter || originalTestimonial.beforeAfter
+        }
+      }
+    } catch (error) {
+      console.log(`Translation not found for testimonials.testimonialData.${testimonialKey}`)
+    }
+    
+    // Fallback to original if translation not found
+    return originalTestimonial
+  }
+
+  const selectedTestimonial = getTranslatedTestimonial(selectedTestimonialId)
 
   const filteredTestimonials = filter === 'all' 
     ? testimonialsData 
-    : testimonialsData.filter(t => t.facilityType.toLowerCase().includes(filter))
+    : testimonialsData.filter(t => {
+        // Check both original and translated facility types for filtering
+        const originalType = t.facilityType.toLowerCase()
+        const translatedTestimonial = getTranslatedTestimonial(t.id)
+        const translatedType = translatedTestimonial.facilityType.toLowerCase()
+        
+        return originalType.includes(filter) || translatedType.includes(filter)
+      })
 
   const facilityTypes = [
-    { value: 'all', label: 'All Facilities' },
-    { value: 'gym', label: 'Gyms & Fitness Centers' },
-    { value: 'spa', label: 'Spas & Wellness Centers' },
-    { value: 'yoga', label: 'Yoga & Pilates Studios' },
-    { value: 'corporate', label: 'Corporate Wellness' },
-    { value: 'pool', label: 'Aquatic Centers' }
+    { value: 'all', label: t('testimonials.filters.all') },
+    { value: 'gym', label: t('testimonials.filters.gym') },
+    { value: 'spa', label: t('testimonials.filters.spa') },
+    { value: 'yoga', label: t('testimonials.filters.yoga') },
+    { value: 'corporate', label: t('testimonials.filters.corporate') },
+    { value: 'pool', label: t('testimonials.filters.pool') }
   ]
 
   return (
@@ -24,10 +63,9 @@ export function Testimonials() {
       <section class="hero-section section">
         <div class="container">
           <div class="text-center">
-            <h1 class="fade-in">Success Stories from Our Partners</h1>
+            <h1 class="fade-in">{t('testimonials.hero.title')}</h1>
             <p class="text-large fade-in">
-              Discover how wellness facilities across the country are transforming their 
-              member experience and revenue with Kautivo smart vending solutions.
+              {t('testimonials.hero.subtitle')}
             </p>
           </div>
         </div>
@@ -38,19 +76,19 @@ export function Testimonials() {
           <div class="stats-grid fade-in">
             <div class="stat-card">
               <div class="stat-number">500+</div>
-              <div class="stat-label">Facilities Served</div>
+              <div class="stat-label">{t('testimonials.stats.facilitiesServed')}</div>
             </div>
             <div class="stat-card">
               <div class="stat-number">98%</div>
-              <div class="stat-label">Customer Satisfaction</div>
+              <div class="stat-label">{t('testimonials.stats.customerSatisfaction')}</div>
             </div>
             <div class="stat-card">
               <div class="stat-number">$4.2M+</div>
-              <div class="stat-label">Revenue Generated</div>
+              <div class="stat-label">{t('testimonials.stats.revenueGenerated')}</div>
             </div>
             <div class="stat-card">
               <div class="stat-number">35%</div>
-              <div class="stat-label">Average Revenue Increase</div>
+              <div class="stat-label">{t('testimonials.stats.averageIncrease')}</div>
             </div>
           </div>
         </div>
@@ -59,7 +97,7 @@ export function Testimonials() {
       <section class="testimonials-section section">
         <div class="container">
           <div class="testimonial-filters fade-in">
-            <h3>Filter by Facility Type:</h3>
+            <h3>{t('testimonials.filters.title')}</h3>
             <div class="filter-buttons">
               {facilityTypes.map(type => (
                 <button
@@ -74,39 +112,42 @@ export function Testimonials() {
           </div>
 
           <div class="testimonials-grid fade-in">
-            {filteredTestimonials.map((testimonial) => (
-              <div 
-                key={testimonial.id} 
-                class={`testimonial-card card ${selectedTestimonial.id === testimonial.id ? 'featured' : ''}`}
-                onClick={() => setSelectedTestimonial(testimonial)}
-              >
-                <div class="testimonial-header">
-                  <div class="customer-info">
-                    <h4>{testimonial.name}</h4>
-                    <p class="customer-title">{testimonial.title}</p>
-                    <p class="company-name">{testimonial.company}</p>
-                    <p class="location">{testimonial.location}</p>
+            {filteredTestimonials.map((testimonial) => {
+              const translatedTestimonial = getTranslatedTestimonial(testimonial.id)
+              return (
+                <div 
+                  key={testimonial.id} 
+                  class={`testimonial-card card ${selectedTestimonialId === testimonial.id ? 'featured' : ''}`}
+                  onClick={() => setSelectedTestimonialId(testimonial.id)}
+                >
+                  <div class="testimonial-header">
+                    <div class="customer-info">
+                      <h4>{testimonial.name}</h4>
+                      <p class="customer-title">{testimonial.title}</p>
+                      <p class="company-name">{testimonial.company}</p>
+                      <p class="location">{testimonial.location}</p>
+                    </div>
+                    <div class="facility-info">
+                      <span class="facility-type">{translatedTestimonial.facilityType}</span>
+                      <span class="member-count">{translatedTestimonial.memberCount}</span>
+                    </div>
                   </div>
-                  <div class="facility-info">
-                    <span class="facility-type">{testimonial.facilityType}</span>
-                    <span class="member-count">{testimonial.memberCount}</span>
+                  
+                  <div class="revenue-highlight">
+                    <span class="revenue-amount">{testimonial.monthlyRevenue}</span>
+                    <span class="revenue-label">{t('testimonials.labels.monthlyRevenue')}</span>
+                  </div>
+                  
+                  <p class="testimonial-preview">
+                    {translatedTestimonial.quote.substring(0, 150)}...
+                  </p>
+                  
+                  <div class="read-more">
+                    {selectedTestimonialId === testimonial.id ? t('testimonials.labels.featured') : t('testimonials.labels.readMore')}
                   </div>
                 </div>
-                
-                <div class="revenue-highlight">
-                  <span class="revenue-amount">{testimonial.monthlyRevenue}</span>
-                  <span class="revenue-label">Monthly Revenue</span>
-                </div>
-                
-                <p class="testimonial-preview">
-                  {testimonial.quote.substring(0, 150)}...
-                </p>
-                
-                <div class="read-more">
-                  {selectedTestimonial.id === testimonial.id ? 'Featured ★' : 'Click to read full story →'}
-                </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
@@ -115,7 +156,7 @@ export function Testimonials() {
         <div class="container">
           <div class="featured-content fade-in">
             <div class="featured-header">
-              <h2>Featured Success Story</h2>
+              <h2>{t('testimonials.featuredStory.title')}</h2>
               <div class="featured-customer">
                 <h3>{selectedTestimonial.company}</h3>
                 <p class="customer-details">
@@ -131,11 +172,11 @@ export function Testimonials() {
             <div class="featured-metrics">
               <div class="metric">
                 <span class="metric-value">{selectedTestimonial.monthlyRevenue}</span>
-                <span class="metric-label">Monthly Revenue</span>
+                <span class="metric-label">{t('testimonials.labels.monthlyRevenue')}</span>
               </div>
               <div class="metric">
                 <span class="metric-value">{selectedTestimonial.paybackPeriod}</span>
-                <span class="metric-label">Payback Period</span>
+                <span class="metric-label">{t('testimonials.labels.paybackPeriod')}</span>
               </div>
             </div>
 
@@ -144,7 +185,7 @@ export function Testimonials() {
             </blockquote>
 
             <div class="success-highlights">
-              <h4>Key Success Factors:</h4>
+              <h4>{t('testimonials.featuredStory.keyFactors')}</h4>
               <ul>
                 {selectedTestimonial.highlights.map((highlight, index) => (
                   <li key={index}>{highlight}</li>
@@ -154,11 +195,11 @@ export function Testimonials() {
 
             <div class="before-after">
               <div class="before-after-item">
-                <h5>Before Kautivo:</h5>
+                <h5>{t('testimonials.featuredStory.beforeKautivo')}</h5>
                 <p>{selectedTestimonial.beforeAfter.before}</p>
               </div>
               <div class="before-after-item">
-                <h5>After Kautivo:</h5>
+                <h5>{t('testimonials.featuredStory.afterKautivo')}</h5>
                 <p>{selectedTestimonial.beforeAfter.after}</p>
               </div>
             </div>
@@ -169,8 +210,8 @@ export function Testimonials() {
       <section class="video-testimonials section">
         <div class="container">
           <div class="text-center">
-            <h2 class="fade-in">Video Testimonials</h2>
-            <p class="fade-in">Hear directly from our satisfied partners</p>
+            <h2 class="fade-in">{t('testimonials.videoSection.title')}</h2>
+            <p class="fade-in">{t('testimonials.videoSection.subtitle')}</p>
           </div>
           
           <div class="grid grid-2 fade-in">
@@ -178,8 +219,8 @@ export function Testimonials() {
               <div class="video-placeholder">
                 <div class="play-button">▶</div>
                 <div class="video-info">
-                  <h4>Elite Fitness Center Tour</h4>
-                  <p>See how the Wellness Pro integrates seamlessly into a premium gym environment</p>
+                  <h4>{t('testimonials.videoSection.video1.title')}</h4>
+                  <p>{t('testimonials.videoSection.video1.description')}</p>
                 </div>
               </div>
             </div>
@@ -188,8 +229,8 @@ export function Testimonials() {
               <div class="video-placeholder">
                 <div class="play-button">▶</div>
                 <div class="video-info">
-                  <h4>Zen Wellness Spa Experience</h4>
-                  <p>Discover how luxury spas enhance client experience with smart vending</p>
+                  <h4>{t('testimonials.videoSection.video2.title')}</h4>
+                  <p>{t('testimonials.videoSection.video2.description')}</p>
                 </div>
               </div>
             </div>
@@ -200,13 +241,13 @@ export function Testimonials() {
       <section class="cta-section section section-alt">
         <div class="container">
           <div class="text-center">
-            <h2 class="fade-in">Ready to Join Our Success Stories?</h2>
+            <h2 class="fade-in">{t('testimonials.cta.title')}</h2>
             <p class="text-large fade-in">
-              Let us help you create your own wellness facility success story.
+              {t('testimonials.cta.subtitle')}
             </p>
             <div class="cta-actions fade-in">
-              <Button href="/contact" size="large">Get Your Free Consultation</Button>
-              <Button href="/benefits" variant="secondary" size="large">Calculate Your ROI</Button>
+              <Button href="/contact" size="large">{t('testimonials.cta.primaryBtn')}</Button>
+              <Button href="/benefits" variant="secondary" size="large">{t('testimonials.cta.secondaryBtn')}</Button>
             </div>
           </div>
         </div>

@@ -1,19 +1,49 @@
 import { useState } from 'preact/hooks'
 import { Button } from '../components/Button'
+import { useI18n } from '../utils/i18n'
 import productsData from '../data/products.json'
+import translations from '../data/translations.json'
 
 export function Products() {
-  const [selectedProduct, setSelectedProduct] = useState(productsData[0])
+  const [selectedProductId, setSelectedProductId] = useState(productsData[0].id)
+  const { t, language } = useI18n()
+
+  const getTranslatedProduct = (productId: string) => {
+    const originalProduct = productsData.find(p => p.id === productId)!
+    
+    // Convert kebab-case to camelCase: "wellness-pro" to "wellnessPro"
+    const productKey = productId.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase())
+    
+    try {
+      const productTranslations = translations[language]?.products?.productData?.[productKey]
+      
+      if (productTranslations && typeof productTranslations === 'object') {
+        return {
+          ...originalProduct,
+          name: productTranslations.name || originalProduct.name,
+          description: productTranslations.description || originalProduct.description,
+          price: productTranslations.price || originalProduct.price,
+          features: Array.isArray(productTranslations.features) ? productTranslations.features : originalProduct.features,
+          ideal_for: Array.isArray(productTranslations.idealFor) ? productTranslations.idealFor : originalProduct.ideal_for
+        }
+      }
+    } catch (error) {
+      console.log(`Translation not found for products.productData.${productKey}`)
+    }
+    
+    return originalProduct // Fallback to original if translation not found
+  }
+
+  const selectedProduct = getTranslatedProduct(selectedProductId)
 
   return (
     <div class="products">
       <section class="hero-section section">
         <div class="container">
           <div class="text-center">
-            <h1 class="fade-in">Smart Vending Machines Built for Wellness</h1>
+            <h1 class="fade-in">{t('products.hero.title')}</h1>
             <p class="text-large fade-in">
-              Choose from our range of premium vending solutions designed specifically 
-              for fitness centers, spas, and wellness facilities.
+              {t('products.hero.subtitle')}
             </p>
           </div>
         </div>
@@ -22,22 +52,25 @@ export function Products() {
       <section class="products-showcase section section-alt">
         <div class="container">
           <div class="product-selector fade-in">
-            {productsData.map((product) => (
-              <button
-                key={product.id}
-                class={`product-tab ${selectedProduct.id === product.id ? 'active' : ''}`}
-                onClick={() => setSelectedProduct(product)}
-              >
-                {product.name}
-              </button>
-            ))}
+            {productsData.map((product) => {
+              const translatedProduct = getTranslatedProduct(product.id)
+              return (
+                <button
+                  key={product.id}
+                  class={`product-tab ${selectedProductId === product.id ? 'active' : ''}`}
+                  onClick={() => setSelectedProductId(product.id)}
+                >
+                  {translatedProduct.name}
+                </button>
+              )
+            })}
           </div>
 
           <div class="product-detail fade-in">
             <div class="product-overview">
               <div class="product-image">
                 <div class="image-placeholder">
-                  {selectedProduct.name} Vending Machine
+                  {selectedProduct.name} {t('products.labels.vendingMachine')}
                 </div>
               </div>
               <div class="product-info">
@@ -46,7 +79,7 @@ export function Products() {
                 <p class="product-price">{selectedProduct.price}</p>
                 
                 <div class="ideal-for">
-                  <h4>Ideal for:</h4>
+                  <h4>{t('products.labels.idealFor')}</h4>
                   <ul>
                     {selectedProduct.ideal_for.map((use, index) => (
                       <li key={index}>{use}</li>
@@ -55,15 +88,15 @@ export function Products() {
                 </div>
                 
                 <div class="product-actions">
-                  <Button href="/contact" size="large">Request Quote</Button>
-                  <Button variant="secondary" href="/benefits">Calculate ROI</Button>
+                  <Button href="/contact" size="large">{t('products.labels.requestQuote')}</Button>
+                  <Button variant="secondary" href="/benefits">{t('products.labels.calculateROI')}</Button>
                 </div>
               </div>
             </div>
 
             <div class="product-details-grid">
               <div class="features-section">
-                <h3>Key Features</h3>
+                <h3>{t('products.labels.keyFeatures')}</h3>
                 <ul class="features-list">
                   {selectedProduct.features.map((feature, index) => (
                     <li key={index}>{feature}</li>
@@ -72,26 +105,26 @@ export function Products() {
               </div>
 
               <div class="specifications-section">
-                <h3>Technical Specifications</h3>
+                <h3>{t('products.labels.technicalSpecs')}</h3>
                 <div class="specs-grid">
                   <div class="spec-item">
-                    <span class="spec-label">Dimensions:</span>
+                    <span class="spec-label">{t('products.labels.dimensions')}</span>
                     <span class="spec-value">{selectedProduct.specifications.dimensions}</span>
                   </div>
                   <div class="spec-item">
-                    <span class="spec-label">Weight:</span>
+                    <span class="spec-label">{t('products.labels.weight')}</span>
                     <span class="spec-value">{selectedProduct.specifications.weight}</span>
                   </div>
                   <div class="spec-item">
-                    <span class="spec-label">Power:</span>
+                    <span class="spec-label">{t('products.labels.power')}</span>
                     <span class="spec-value">{selectedProduct.specifications.power}</span>
                   </div>
                   <div class="spec-item">
-                    <span class="spec-label">Capacity:</span>
+                    <span class="spec-label">{t('products.labels.capacity')}</span>
                     <span class="spec-value">{selectedProduct.specifications.capacity}</span>
                   </div>
                   <div class="spec-item">
-                    <span class="spec-label">Temperature:</span>
+                    <span class="spec-label">{t('products.labels.temperature')}</span>
                     <span class="spec-value">{selectedProduct.specifications.temperature}</span>
                   </div>
                 </div>
@@ -104,24 +137,24 @@ export function Products() {
       <section class="customization-section section">
         <div class="container">
           <div class="text-center">
-            <h2 class="fade-in">Customization Options</h2>
-            <p class="fade-in">Make your vending machine match your facility's brand and aesthetic</p>
+            <h2 class="fade-in">{t('products.customization.title')}</h2>
+            <p class="fade-in">{t('products.customization.subtitle')}</p>
           </div>
           
           <div class="grid grid-3 fade-in">
             <div class="customization-card card">
-              <h3>🎨 Branding & Graphics</h3>
-              <p>Custom wraps, logos, colors, and promotional displays to match your brand identity.</p>
+              <h3>{t('products.customization.branding.title')}</h3>
+              <p>{t('products.customization.branding.description')}</p>
             </div>
             
             <div class="customization-card card">
-              <h3>📱 Software Integration</h3>
-              <p>Connect with your existing member management system, loyalty programs, and apps.</p>
+              <h3>{t('products.customization.software.title')}</h3>
+              <p>{t('products.customization.software.description')}</p>
             </div>
             
             <div class="customization-card card">
-              <h3>🥗 Product Curation</h3>
-              <p>We help select the perfect product mix based on your facility type and member preferences.</p>
+              <h3>{t('products.customization.curation.title')}</h3>
+              <p>{t('products.customization.curation.description')}</p>
             </div>
           </div>
         </div>
@@ -130,43 +163,54 @@ export function Products() {
       <section class="comparison-section section section-alt">
         <div class="container">
           <div class="text-center">
-            <h2 class="fade-in">Compare Our Models</h2>
+            <h2 class="fade-in">{t('products.comparison.title')}</h2>
           </div>
           
           <div class="comparison-table fade-in">
             <div class="comparison-header">
-              <div class="feature-column">Features</div>
-              {productsData.map(product => (
-                <div key={product.id} class="product-column">{product.name}</div>
+              <div class="feature-column">{t('products.comparison.features')}</div>
+              {productsData.map(product => {
+                const translatedProduct = getTranslatedProduct(product.id)
+                return (
+                  <div key={product.id} class="product-column">{translatedProduct.name}</div>
+                )
+              })}
+            </div>
+            
+            <div class="comparison-row">
+              <div class="feature-name">{t('products.comparison.screenSize')}</div>
+              {translations[language]?.products?.comparison?.values?.screenSizes?.map((size, index) => (
+                <div key={index} class="feature-value">{size}</div>
+              )) || ['55" 4K', '32" HD', '36" Premium'].map((size, index) => (
+                <div key={index} class="feature-value">{size}</div>
               ))}
             </div>
             
             <div class="comparison-row">
-              <div class="feature-name">Screen Size</div>
-              <div class="feature-value">55" 4K</div>
-              <div class="feature-value">32" HD</div>
-              <div class="feature-value">36" Premium</div>
+              <div class="feature-name">{t('products.comparison.capacity')}</div>
+              {translations[language]?.products?.comparison?.values?.capacities?.map((capacity, index) => (
+                <div key={index} class="feature-value">{capacity}</div>
+              )) || ['120 products', '60 products', '80 products'].map((capacity, index) => (
+                <div key={index} class="feature-value">{capacity}</div>
+              ))}
             </div>
             
             <div class="comparison-row">
-              <div class="feature-name">Capacity</div>
-              <div class="feature-value">120 products</div>
-              <div class="feature-value">60 products</div>
-              <div class="feature-value">80 products</div>
+              <div class="feature-name">{t('products.comparison.temperatureZones')}</div>
+              {translations[language]?.products?.comparison?.values?.temperatureZones?.map((zone, index) => (
+                <div key={index} class="feature-value">{zone}</div>
+              )) || ['Dual', 'Single', 'Ambient'].map((zone, index) => (
+                <div key={index} class="feature-value">{zone}</div>
+              ))}
             </div>
             
             <div class="comparison-row">
-              <div class="feature-name">Temperature Zones</div>
-              <div class="feature-value">Dual</div>
-              <div class="feature-value">Single</div>
-              <div class="feature-value">Ambient</div>
-            </div>
-            
-            <div class="comparison-row">
-              <div class="feature-name">Starting Price</div>
-              <div class="feature-value">$8,500</div>
-              <div class="feature-value">$5,500</div>
-              <div class="feature-value">$12,000</div>
+              <div class="feature-name">{t('products.comparison.startingPrice')}</div>
+              {translations[language]?.products?.comparison?.values?.prices?.map((price, index) => (
+                <div key={index} class="feature-value">{price}</div>
+              )) || ['$8,500', '$5,500', '$12,000'].map((price, index) => (
+                <div key={index} class="feature-value">{price}</div>
+              ))}
             </div>
           </div>
         </div>

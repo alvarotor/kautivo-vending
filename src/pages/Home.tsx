@@ -1,6 +1,9 @@
 import { Button } from '../components/Button'
+import { useI18n } from '../utils/i18n'
 
 export function Home() {
+  const { t } = useI18n()
+  
   return (
     <div class="home">
       <section class="hero">
@@ -8,17 +11,15 @@ export function Home() {
           <div class="hero-content">
             <div class="hero-text">
               <h1 class="hero-title fade-in">
-                Smart Vending Solutions for 
-                <span class="text-accent"> Wellness Facilities</span>
+                {t('home.hero.title')} 
+                <span class="text-accent"> {t('home.hero.titleAccent')}</span>
               </h1>
               <p class="hero-description fade-in">
-                Enhance your fitness center, spa, or wellness facility with premium vending machines 
-                designed specifically for health-conscious environments. Boost revenue while serving 
-                your community's wellness goals.
+                {t('home.hero.description')}
               </p>
               <div class="hero-actions fade-in">
-                <Button href="/contact" size="large">Get Free Consultation</Button>
-                <Button href="/products" variant="secondary" size="large">View Products</Button>
+                <Button href="/contact" size="large">{t('home.hero.ctaPrimary')}</Button>
+                <Button href="/products" variant="secondary" size="large">{t('home.hero.ctaSecondary')}</Button>
               </div>
             </div>
             <div class="hero-image fade-in">
@@ -33,29 +34,29 @@ export function Home() {
       <section class="benefits-preview section">
         <div class="container">
           <div class="text-center">
-            <h2 class="fade-in">Why Choose Kautivo?</h2>
+            <h2 class="fade-in">{t('home.benefits.title')}</h2>
             <p class="text-large fade-in">
-              Purpose-built for the wellness industry with features that matter to your business
+              {t('home.benefits.subtitle')}
             </p>
           </div>
           
           <div class="grid grid-3 fade-in">
             <div class="benefit-card card">
               <div class="benefit-icon">💰</div>
-              <h3>Increase Revenue</h3>
-              <p>Generate 24/7 passive income with high-margin healthy products your members actually want.</p>
+              <h3>{t('home.benefits.revenue.title')}</h3>
+              <p>{t('home.benefits.revenue.description')}</p>
             </div>
             
             <div class="benefit-card card">
               <div class="benefit-icon">🏃‍♀️</div>
-              <h3>Member Convenience</h3>
-              <p>Provide post-workout nutrition and wellness products exactly when and where members need them.</p>
+              <h3>{t('home.benefits.convenience.title')}</h3>
+              <p>{t('home.benefits.convenience.description')}</p>
             </div>
             
             <div class="benefit-card card">
               <div class="benefit-icon">📊</div>
-              <h3>Smart Analytics</h3>
-              <p>Track sales, inventory, and member preferences with real-time data and insights.</p>
+              <h3>{t('home.benefits.analytics.title')}</h3>
+              <p>{t('home.benefits.analytics.description')}</p>
             </div>
           </div>
         </div>
@@ -64,19 +65,19 @@ export function Home() {
       <section class="social-proof section section-alt">
         <div class="container">
           <div class="text-center">
-            <h2 class="fade-in">Trusted by Leading Wellness Facilities</h2>
+            <h2 class="fade-in">{t('home.socialProof.title')}</h2>
             <div class="stats fade-in">
               <div class="stat">
                 <span class="stat-number">500+</span>
-                <span class="stat-label">Facilities Served</span>
+                <span class="stat-label">{t('home.socialProof.facilities')}</span>
               </div>
               <div class="stat">
                 <span class="stat-number">98%</span>
-                <span class="stat-label">Customer Satisfaction</span>
+                <span class="stat-label">{t('home.socialProof.satisfaction')}</span>
               </div>
               <div class="stat">
                 <span class="stat-number">35%</span>
-                <span class="stat-label">Average Revenue Increase</span>
+                <span class="stat-label">{t('home.socialProof.revenue')}</span>
               </div>
             </div>
           </div>
@@ -86,13 +87,13 @@ export function Home() {
       <section class="cta-section section">
         <div class="container">
           <div class="cta-content text-center">
-            <h2 class="fade-in">Ready to Transform Your Facility?</h2>
+            <h2 class="fade-in">{t('home.cta.title')}</h2>
             <p class="text-large fade-in">
-              Join hundreds of wellness facilities already benefiting from smart vending solutions.
+              {t('home.cta.subtitle')}
             </p>
             <div class="cta-actions fade-in">
-              <Button href="/contact" size="large">Start Your Free Trial</Button>
-              <Button href="/benefits" variant="secondary" size="large">Calculate ROI</Button>
+              <Button href="/contact" size="large">{t('home.cta.ctaPrimary')}</Button>
+              <Button href="/benefits" variant="secondary" size="large">{t('home.cta.ctaSecondary')}</Button>
             </div>
           </div>
         </div>

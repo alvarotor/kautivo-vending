@@ -1,0 +1,1477 @@
+{
+  "en": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "products": "Products",
+      "benefits": "Benefits",
+      "testimonials": "Testimonials",
+      "contact": "Contact"
+    },
+    "home": {
+      "hero": {
+        "title": "Smart Vending Solutions for",
+        "titleAccent": "Wellness Facilities",
+        "description": "Enhance your fitness center, spa, or wellness facility with premium vending machines designed specifically for health-conscious environments. Boost revenue while serving your community's wellness goals.",
+        "ctaPrimary": "Get Free Consultation",
+        "ctaSecondary": "View Products"
+      },
+      "benefits": {
+        "title": "Why Choose Kautivo?",
+        "subtitle": "Purpose-built for the wellness industry with features that matter to your business",
+        "revenue": {
+          "title": "Increase Revenue",
+          "description": "Generate 24/7 passive income with high-margin healthy products your members actually want."
+        },
+        "convenience": {
+          "title": "Member Convenience",
+          "description": "Provide post-workout nutrition and wellness products exactly when and where members need them."
+        },
+        "analytics": {
+          "title": "Smart Analytics",
+          "description": "Track sales, inventory, and member preferences with real-time data and insights."
+        }
+      },
+      "socialProof": {
+        "title": "Trusted by Leading Wellness Facilities",
+        "facilities": "Facilities Served",
+        "satisfaction": "Customer Satisfaction",
+        "revenue": "Average Revenue Increase"
+      },
+      "cta": {
+        "title": "Ready to Transform Your Facility?",
+        "subtitle": "Join hundreds of wellness facilities already benefiting from smart vending solutions.",
+        "ctaPrimary": "Start Your Free Trial",
+        "ctaSecondary": "Calculate ROI"
+      }
+    },
+    "about": {
+      "hero": {
+        "title": "Revolutionizing Wellness Through Smart Vending",
+        "subtitle": "At Kautivo, we believe that wellness facilities deserve vending solutions as thoughtful and premium as the services they provide."
+      },
+      "story": {
+        "title": "Our Story",
+        "paragraph1": "Founded in 2020 by wellness industry veterans, Kautivo emerged from a simple observation: traditional vending machines were failing to serve the unique needs of health-conscious facilities and their members.",
+        "paragraph2": "We saw gym-goers settling for processed snacks when they needed clean protein. We witnessed spa clients leaving empty-handed when they could have taken home premium wellness products. We recognized that facility owners were missing out on significant revenue opportunities.",
+        "paragraph3": "That's when we decided to build something different – vending machines designed specifically for the wellness industry, stocked with products that align with your facility's values and your members' goals."
+      },
+      "mission": {
+        "title": "Our Mission",
+        "subtitle": "To empower wellness facilities with intelligent vending solutions that enhance member experience while driving sustainable revenue growth.",
+        "purposeBuilt": {
+          "title": "🎯 Purpose-Built",
+          "description": "Every feature designed specifically for wellness environments and health-conscious consumers."
+        },
+        "partnership": {
+          "title": "🤝 Partnership",
+          "description": "We're not just vendors – we're partners invested in your facility's long-term success."
+        },
+        "growth": {
+          "title": "📈 Growth",
+          "description": "Helping facilities unlock new revenue streams while serving their community better."
+        }
+      },
+      "team": {
+        "title": "Leadership Team",
+        "subtitle": "Industry experts with deep wellness and technology backgrounds",
+        "sarah": {
+          "name": "Sarah Johnson",
+          "title": "CEO & Co-Founder",
+          "description": "15+ years in fitness industry operations and franchise management"
+        },
+        "michael": {
+          "name": "Michael Chen",
+          "title": "CTO & Co-Founder",
+          "description": "Former tech lead at major vending technology companies"
+        },
+        "lisa": {
+          "name": "Lisa Rodriguez",
+          "title": "VP of Customer Success",
+          "description": "Wellness industry consultant with 200+ facility partnerships"
+        }
+      },
+      "certifications": {
+        "title": "Trust & Certifications",
+        "fda": {
+          "title": "FDA Compliant",
+          "description": "All food handling and storage meets FDA requirements"
+        },
+        "energyStar": {
+          "title": "Energy Star Certified",
+          "description": "Environmentally responsible and energy efficient"
+        },
+        "pci": {
+          "title": "PCI DSS Compliant",
+          "description": "Secure payment processing and data protection"
+        },
+        "ada": {
+          "title": "ADA Accessible",
+          "description": "Designed for universal accessibility"
+        }
+      }
+    },
+    "products": {
+      "hero": {
+        "title": "Smart Vending Machines Built for Wellness",
+        "subtitle": "Choose from our range of premium vending solutions designed specifically for fitness centers, spas, and wellness facilities."
+      },
+      "labels": {
+        "idealFor": "Ideal for:",
+        "keyFeatures": "Key Features",
+        "technicalSpecs": "Technical Specifications",
+        "dimensions": "Dimensions:",
+        "weight": "Weight:",
+        "power": "Power:",
+        "capacity": "Capacity:",
+        "temperature": "Temperature:",
+        "requestQuote": "Request Quote",
+        "calculateROI": "Calculate ROI",
+        "vendingMachine": "Vending Machine",
+        "startingAt": "Starting at"
+      },
+      "customization": {
+        "title": "Customization Options",
+        "subtitle": "Make your vending machine match your facility's brand and aesthetic",
+        "branding": {
+          "title": "🎨 Branding & Graphics",
+          "description": "Custom wraps, logos, colors, and promotional displays to match your brand identity."
+        },
+        "software": {
+          "title": "📱 Software Integration",
+          "description": "Connect with your existing member management system, loyalty programs, and apps."
+        },
+        "curation": {
+          "title": "🥗 Product Curation",
+          "description": "We help select the perfect product mix based on your facility type and member preferences."
+        }
+      },
+      "comparison": {
+        "title": "Compare Our Models",
+        "features": "Features",
+        "screenSize": "Screen Size",
+        "capacity": "Capacity",
+        "temperatureZones": "Temperature Zones",
+        "startingPrice": "Starting Price",
+        "values": {
+          "screenSizes": ["55\" 4K", "32\" HD", "36\" Premium"],
+          "capacities": ["120 products", "60 products", "80 products"],
+          "temperatureZones": ["Dual", "Single", "Ambient"],
+          "prices": ["$8,500", "$5,500", "$12,000"]
+        }
+      },
+      "productData": {
+        "wellnessPro": {
+          "name": "Wellness Pro",
+          "description": "Our flagship model designed for premium fitness centers and wellness facilities",
+          "features": [
+            "55-inch 4K touchscreen display",
+            "120 product capacity with adjustable shelving",
+            "Dual temperature zones (refrigerated & ambient)",
+            "Contactless payment (NFC, mobile wallets)",
+            "Real-time inventory tracking",
+            "Remote monitoring and analytics",
+            "ADA compliant design",
+            "Energy Star certified",
+            "Custom branding options"
+          ],
+          "idealFor": ["Large fitness centers", "Premium spas", "Corporate wellness centers"]
+        },
+        "fitnessCompact": {
+          "name": "Fitness Compact",
+          "description": "Space-efficient solution perfect for boutique studios and smaller facilities",
+          "features": [
+            "32-inch HD touchscreen",
+            "60 product capacity",
+            "Single temperature zone (refrigerated or ambient)",
+            "Contactless payment support",
+            "Mobile app integration",
+            "Compact footprint",
+            "Energy efficient design",
+            "Custom wrap options"
+          ],
+          "idealFor": ["Boutique fitness studios", "Yoga centers", "Small gyms"]
+        },
+        "spaLuxury": {
+          "name": "Spa Luxury",
+          "description": "Elegant design with premium finishes for high-end wellness environments",
+          "features": [
+            "Tempered glass front with LED lighting",
+            "Whisper-quiet operation",
+            "Premium product display",
+            "Biometric payment options",
+            "Ambient lighting customization",
+            "Luxury product compatibility",
+            "Silent operation mode",
+            "Premium materials and finishes"
+          ],
+          "idealFor": ["Luxury spas", "High-end wellness centers", "Resort facilities"]
+        }
+      }
+    },
+    "benefits": {
+      "hero": {
+        "title": "Measurable Benefits for Your Wellness Facility",
+        "subtitle": "Discover how smart vending solutions can transform your member experience while generating significant additional revenue."
+      },
+      "overview": {
+        "title": "Complete Benefits Overview"
+      },
+      "financial": {
+        "title": "💰 Financial Benefits",
+        "additionalRevenue": {
+          "title": "Additional Revenue Stream",
+          "description": "Generate $3,000-$8,000+ monthly passive income with zero labor costs"
+        },
+        "profitMargins": {
+          "title": "High Profit Margins",
+          "description": "70-80% profit margins on wellness products vs. 20-30% on typical retail"
+        },
+        "quickROI": {
+          "title": "Quick ROI",
+          "description": "Typical payback period of 8-14 months with continued profit thereafter"
+        },
+        "revenueSharing": {
+          "title": "Revenue Sharing",
+          "description": "Earn 70% of all sales with no inventory investment or management required"
+        }
+      },
+      "memberExperience": {
+        "title": "🏃‍♀️ Member Experience",
+        "convenience": {
+          "title": "24/7 Convenience",
+          "description": "Members access nutrition and wellness products anytime, even when staff isn't available"
+        },
+        "nutrition": {
+          "title": "Post-Workout Nutrition",
+          "description": "Immediate access to protein bars, recovery drinks, and healthy snacks"
+        },
+        "products": {
+          "title": "Wellness Products",
+          "description": "Supplements, fitness accessories, and health products aligned with your facility's mission"
+        },
+        "contactless": {
+          "title": "Contactless Experience",
+          "description": "Safe, hygienic purchasing with mobile payments and touchless options"
+        }
+      },
+      "operational": {
+        "title": "📊 Operational Advantages",
+        "zeroStaff": {
+          "title": "Zero Staff Requirements",
+          "description": "Fully automated operation with remote monitoring and restocking services"
+        },
+        "analytics": {
+          "title": "Real-Time Analytics",
+          "description": "Track sales, popular products, and member preferences through detailed reporting"
+        },
+        "inventory": {
+          "title": "Inventory Management",
+          "description": "Automatic alerts and scheduled restocking prevent out-of-stock situations"
+        },
+        "branding": {
+          "title": "Brand Enhancement",
+          "description": "Custom branding options reinforce your facility's professional image"
+        }
+      },
+      "caseStudies": {
+        "title": "Real Results from Real Facilities",
+        "eliteFitness": {
+          "name": "Elite Fitness Center",
+          "type": "Premium Gym • 2,500 monthly members",
+          "revenue": "$6,800",
+          "payback": "11 months",
+          "satisfaction": "95%",
+          "quote": "The vending machine has been a game-changer. Our members love the convenience, and we're generating significant additional revenue with zero effort.",
+          "author": "- Sarah Mitchell, Owner",
+          "labels": {
+            "monthlyRevenue": "Average Monthly Revenue",
+            "paybackPeriod": "Payback Period",
+            "satisfaction": "Member Satisfaction"
+          }
+        },
+        "zenWellness": {
+          "name": "Zen Wellness Spa",
+          "type": "Luxury Spa • 800 monthly clients",
+          "revenue": "$3,200",
+          "payback": "9 months",
+          "increase": "42%",
+          "quote": "Our clients appreciate being able to purchase premium wellness products after their treatments. It's extended our retail offerings beautifully.",
+          "author": "- David Chen, Spa Director",
+          "labels": {
+            "monthlyRevenue": "Average Monthly Revenue",
+            "paybackPeriod": "Payback Period",
+            "revenueIncrease": "Revenue Increase"
+          }
+        }
+      },
+      "competitive": {
+        "title": "Why Kautivo vs. Traditional Vending?"
+      },
+      "cta": {
+        "title": "Ready to Unlock These Benefits?",
+        "subtitle": "Join hundreds of wellness facilities already maximizing their revenue potential.",
+        "primaryBtn": "Schedule Free Consultation",
+        "secondaryBtn": "Read More Success Stories"
+      }
+    },
+    "roiCalculator": {
+      "title": "Calculate Your Potential ROI",
+      "form": {
+        "facilityType": "Facility Type",
+        "monthlyVisitors": "Monthly Visitors",
+        "averageSpend": "Expected Average Spend per Customer",
+        "operatingHours": "Daily Operating Hours",
+        "currentRevenue": "Current Monthly Retail Revenue (Optional)",
+        "currentRevenuePlaceholder": "Enter current monthly revenue",
+        "calculateButton": "Calculate ROI"
+      },
+      "facilityTypes": {
+        "fitnessCenter": "Fitness Center/Gym",
+        "yogaStudio": "Yoga/Pilates Studio", 
+        "spa": "Spa/Wellness Center",
+        "pool": "Swimming Pool/Aquatics",
+        "rehabilitation": "Rehabilitation Clinic",
+        "coworking": "Coworking Space"
+      },
+      "visitorRanges": {
+        "range1": "0-500 visitors",
+        "range2": "500-1,000 visitors",
+        "range3": "1,000-2,000 visitors",
+        "range4": "2,000-5,000 visitors",
+        "range5": "5,000+ visitors"
+      },
+      "spendRanges": {
+        "range1": "$2-4 per visit",
+        "range2": "$4-6 per visit",
+        "range3": "$6-8 per visit",
+        "range4": "$8-12 per visit",
+        "range5": "$12+ per visit"
+      },
+      "hoursRanges": {
+        "range1": "8-12 hours",
+        "range2": "12-16 hours", 
+        "range3": "16-20 hours",
+        "range4": "20-24 hours"
+      },
+      "results": {
+        "title": "Your Projected Results",
+        "monthlyRevenue": "Estimated Monthly Revenue",
+        "annualRevenue": "Projected Annual Revenue",
+        "paybackPeriod": "Investment Payback Period",
+        "firstYearProfit": "First Year Net Profit",
+        "months": "months"
+      },
+      "assumptions": {
+        "title": "Calculation Assumptions:",
+        "purchaseRate": "15% of visitors make a purchase (industry average)",
+        "machineInvestment": "Machine investment: $",
+        "operatingCosts": "Monthly operating costs: $200 (restocking, maintenance, processing fees)",
+        "revenueSharing": "Revenue sharing with facility: 70% facility / 30% Kautivo"
+      },
+      "nextSteps": {
+        "title": "Ready to get started?",
+        "button": "Get Free Consultation"
+      }
+    },
+    "testimonials": {
+      "hero": {
+        "title": "Success Stories from Our Partners",
+        "subtitle": "Discover how wellness facilities across the country are transforming their member experience and revenue with Kautivo smart vending solutions."
+      },
+      "stats": {
+        "facilitiesServed": "Facilities Served",
+        "customerSatisfaction": "Customer Satisfaction",
+        "revenueGenerated": "Revenue Generated",
+        "averageIncrease": "Average Revenue Increase"
+      },
+      "filters": {
+        "title": "Filter by Facility Type:",
+        "all": "All Facilities",
+        "gym": "Gyms & Fitness Centers",
+        "spa": "Spas & Wellness Centers",
+        "yoga": "Yoga & Pilates Studios",
+        "corporate": "Corporate Wellness",
+        "pool": "Aquatic Centers"
+      },
+      "labels": {
+        "monthlyRevenue": "Monthly Revenue",
+        "paybackPeriod": "Payback Period",
+        "featured": "Featured ★",
+        "readMore": "Click to read full story →"
+      },
+      "featuredStory": {
+        "title": "Featured Success Story",
+        "keyFactors": "Key Success Factors:",
+        "beforeKautivo": "Before Kautivo:",
+        "afterKautivo": "After Kautivo:"
+      },
+      "videoSection": {
+        "title": "Video Testimonials",
+        "subtitle": "Hear directly from our satisfied partners",
+        "video1": {
+          "title": "Elite Fitness Center Tour",
+          "description": "See how the Wellness Pro integrates seamlessly into a premium gym environment"
+        },
+        "video2": {
+          "title": "Zen Wellness Spa Experience", 
+          "description": "Discover how luxury spas enhance client experience with smart vending"
+        }
+      },
+      "cta": {
+        "title": "Ready to Join Our Success Stories?",
+        "subtitle": "Let us help you create your own wellness facility success story.",
+        "primaryBtn": "Get Your Free Consultation",
+        "secondaryBtn": "Calculate Your ROI"
+      },
+      "testimonialData": {
+        "eliteFitness": {
+          "facilityType": "Premium Gym",
+          "memberCount": "2,500+ members",
+          "quote": "The Kautivo vending machine has been a complete game-changer for our facility. Our members absolutely love the convenience of grabbing high-quality protein bars and recovery drinks right after their workouts. We're generating nearly $7,000 in additional monthly revenue with literally zero effort on our part. The machine is beautiful, reliable, and perfectly matches our premium brand aesthetic.",
+          "highlights": [
+            "Increased member satisfaction scores by 23%",
+            "Generated $81,600 in first year revenue",
+            "Zero staff time required for management",
+            "Perfect integration with facility design"
+          ],
+          "beforeAfter": {
+            "before": "No retail options for post-workout nutrition",
+            "after": "24/7 access to premium wellness products"
+          }
+        },
+        "zenWellness": {
+          "facilityType": "Luxury Spa",
+          "memberCount": "800 monthly clients",
+          "quote": "Our clients expect premium experiences in every aspect of their visit, and the Kautivo machine delivers exactly that. The sleek design fits perfectly in our serene environment, and the curated selection of wellness products extends our retail offerings beautifully. Clients often purchase supplements and aromatherapy products after their treatments, creating a seamless wellness journey.",
+          "highlights": [
+            "42% increase in total facility revenue",
+            "Enhanced client experience and satisfaction",
+            "Premium product selection aligns with spa values",
+            "Whisper-quiet operation maintains tranquil atmosphere"
+          ],
+          "beforeAfter": {
+            "before": "Limited retail space for wellness products",
+            "after": "Expanded product offering without additional staff"
+          }
+        },
+        "crossfitDowntown": {
+          "facilityType": "CrossFit Box",
+          "memberCount": "450 members",
+          "quote": "Our CrossFit athletes burn through calories and need immediate post-workout nutrition. The Kautivo machine stocks exactly what they need - protein bars, BCAAs, and recovery drinks. The real-time analytics help us understand what products our athletes prefer most, and we've been able to optimize our inventory accordingly. It's like having a 24/7 nutrition store that runs itself.",
+          "highlights": [
+            "Popular with competitive athletes and weekend warriors",
+            "Analytics revealed unexpected product preferences",
+            "Reduced member complaints about nutrition options",
+            "Strong ROI despite smaller member base"
+          ],
+          "beforeAfter": {
+            "before": "Members had to leave facility for post-workout nutrition",
+            "after": "Complete nutrition solution on-site"
+          }
+        },
+        "yogaSanctuary": {
+          "facilityType": "Yoga Studio",
+          "memberCount": "320 members",
+          "quote": "We were initially concerned about adding any technology to our peaceful space, but the Kautivo team worked with us to customize the machine to fit our aesthetic perfectly. The gentle lighting and silent operation maintain our studio's tranquil atmosphere. Our students love having access to organic energy bars and herbal teas, especially after our longer workshops and teacher trainings.",
+          "highlights": [
+            "Custom design integration with studio aesthetic",
+            "Organic and natural product focus",
+            "Popular during teacher training intensives",
+            "Enhanced student experience without disruption"
+          ],
+          "beforeAfter": {
+            "before": "No food or beverage options for long sessions",
+            "after": "Nourishing options that support practice"
+          }
+        },
+        "corporateWellness": {
+          "facilityType": "Corporate Wellness",
+          "memberCount": "1,200 employees",
+          "quote": "Employee wellness is a top priority for our company, and the Kautivo machine perfectly supports our initiatives. Our employees appreciate having healthy snack and supplement options right in our wellness center. The machine's professional appearance and reliable operation align with our corporate standards, and the revenue helps offset our wellness program costs.",
+          "highlights": [
+            "Supports corporate wellness initiatives",
+            "Professional appearance fits corporate environment",
+            "Revenue helps fund additional wellness programs",
+            "High employee satisfaction and usage rates"
+          ],
+          "beforeAfter": {
+            "before": "Limited healthy options in company cafeteria",
+            "after": "Dedicated wellness nutrition hub"
+          }
+        },
+        "aquaticCenter": {
+          "facilityType": "Swimming Pool",
+          "memberCount": "600 daily visitors",
+          "quote": "Swimmers and water aerobics participants often work up quite an appetite, but we never had good options for post-swim nutrition. The Kautivo machine solved this perfectly with waterproof protein bars, electrolyte drinks, and healthy snacks. The machine's humidity-resistant design works great in our pool environment, and maintenance has been virtually non-existent.",
+          "highlights": [
+            "Humidity-resistant design perfect for pool environment",
+            "Popular with competitive swimmers and casual users",
+            "Minimal maintenance despite challenging environment",
+            "Improved overall visitor satisfaction"
+          ],
+          "beforeAfter": {
+            "before": "Swimmers left hungry after training sessions",
+            "after": "Complete post-swim nutrition solution"
+          }
+        }
+      }
+    },
+    "contact": {
+      "hero": {
+        "title": "Get Your Free Consultation",
+        "subtitle": "Ready to transform your wellness facility with smart vending solutions? Let's discuss your specific needs and create a customized plan."
+      },
+      "whyConsultation": {
+        "title": "Why Choose a Free Consultation?",
+        "assessment": {
+          "title": "Customized Assessment",
+          "description": "We analyze your facility's unique layout, traffic patterns, and member demographics"
+        },
+        "roi": {
+          "title": "ROI Projections",
+          "description": "Get detailed revenue projections based on your specific facility metrics"
+        },
+        "planning": {
+          "title": "Implementation Planning",
+          "description": "Receive a complete roadmap for installation and product curation"
+        },
+        "noObligation": {
+          "title": "No Obligation",
+          "description": "Get expert insights and recommendations with no pressure to commit"
+        }
+      },
+      "contactMethods": {
+        "title": "Get in Touch Directly",
+        "email": "📧 Email:",
+        "phone": "📞 Phone:",
+        "hours": "🕒 Hours:",
+        "responseTime": "⚡ Response Time:",
+        "hoursValue": "Monday-Friday 9AM-6PM EST",
+        "responseValue": "Within 24 hours"
+      },
+      "process": {
+        "title": "Our Consultation Process",
+        "subtitle": "A simple, transparent process designed around your schedule",
+        "step1": {
+          "title": "Initial Contact",
+          "description": "Submit your information and we'll reach out within 24 hours to schedule your consultation",
+          "duration": "Same day response"
+        },
+        "step2": {
+          "title": "Facility Assessment",
+          "description": "30-minute video call or in-person visit to understand your space, members, and goals",
+          "duration": "30-45 minutes"
+        },
+        "step3": {
+          "title": "Custom Proposal",
+          "description": "Detailed recommendation with ROI projections, product selection, and implementation timeline",
+          "duration": "3-5 business days"
+        },
+        "step4": {
+          "title": "Decision & Setup",
+          "description": "If you choose to proceed, we handle everything from installation to initial stocking",
+          "duration": "2-3 weeks"
+        }
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "q1": {
+          "question": "What does the consultation include?",
+          "answer": "A comprehensive facility assessment, member demographic analysis, ROI projections, product recommendations, and a detailed implementation plan."
+        },
+        "q2": {
+          "question": "Is there really no cost or obligation?",
+          "answer": "Absolutely none. We believe in demonstrating value first. You'll receive actionable insights regardless of whether you choose to work with us."
+        },
+        "q3": {
+          "question": "How long before I see ROI?",
+          "answer": "Most facilities see positive cash flow within 2-3 months and full ROI within 8-14 months, depending on size and traffic."
+        },
+        "q4": {
+          "question": "What ongoing support do you provide?",
+          "answer": "Complete ongoing support including restocking, maintenance, analytics reporting, and 24/7 technical support."
+        },
+        "q5": {
+          "question": "Can you work with existing contracts?",
+          "answer": "Yes, we can often work around existing vending contracts or help you transition when contracts expire."
+        },
+        "q6": {
+          "question": "What if my facility is too small?",
+          "answer": "We work with facilities of all sizes. Even smaller studios can benefit from our compact models and flexible arrangements."
+        }
+      }
+    },
+    "footer": {
+      "tagline": "Smart vending solutions for wellness facilities worldwide.",
+      "sections": {
+        "solutions": "Solutions",
+        "company": "Company",
+        "contact": "Contact"
+      },
+      "links": {
+        "vendingMachines": "Smart Vending Machines",
+        "roiCalculator": "ROI Calculator",
+        "caseStudies": "Case Studies",
+        "aboutUs": "About Us",
+        "contact": "Contact",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
+      },
+      "contactInfo": {
+        "email": "Email: info@kautivo.com",
+        "phone": "Phone: +1 (555) 123-4567",
+        "hours": "Hours: Mon-Fri 9AM-6PM EST"
+      },
+      "copyright": "© 2024 Kautivo. All rights reserved."
+    },
+    "contactForm": {
+      "progress": {
+        "step1": "1. Contact Info",
+        "step2": "2. Business Details", 
+        "step3": "3. Preferences"
+      },
+      "step1": {
+        "title": "Contact Information",
+        "fullName": "Full Name",
+        "businessEmail": "Business Email",
+        "phoneNumber": "Phone Number",
+        "phonePlaceholder": "(555) 123-4567",
+        "companyName": "Company/Facility Name"
+      },
+      "step2": {
+        "title": "Business Details",
+        "businessType": "Business Type",
+        "monthlyVisitors": "Monthly Visitor Count",
+        "currentVending": "Do you currently have vending machines?",
+        "yes": "Yes",
+        "no": "No"
+      },
+      "step3": {
+        "title": "Contact Preferences",
+        "contactMethod": "Preferred Contact Method",
+        "bestTime": "Best Time to Contact",
+        "requirements": "Additional Requirements or Questions",
+        "requirementsPlaceholder": "Tell us about any specific needs, space constraints, or questions you have...",
+        "termsAgreement": "I agree to be contacted by Kautivo regarding vending solutions and understand that my information will be used according to the privacy policy."
+      },
+      "businessTypes": {
+        "fitnessCenter": "Fitness Center/Gym",
+        "yogaStudio": "Yoga/Pilates Studio",
+        "spa": "Spa/Wellness Center",
+        "pool": "Swimming Pool/Aquatics Center",
+        "rehabilitation": "Rehabilitation Clinic",
+        "coworking": "Coworking Space",
+        "other": "Other"
+      },
+      "visitorRanges": {
+        "range1": "0-500 monthly visitors",
+        "range2": "500-1,000 monthly visitors",
+        "range3": "1,000-2,000 monthly visitors",
+        "range4": "2,000-5,000 monthly visitors",
+        "range5": "5,000+ monthly visitors"
+      },
+      "contactMethods": {
+        "email": "Email",
+        "phone": "Phone Call",
+        "either": "Either Email or Phone"
+      },
+      "bestTimes": {
+        "morning": "Morning (9 AM - 12 PM)",
+        "afternoon": "Afternoon (12 PM - 5 PM)",
+        "evening": "Evening (5 PM - 8 PM)",
+        "anytime": "Anytime"
+      },
+      "buttons": {
+        "previous": "Previous",
+        "nextStep": "Next Step",
+        "submitRequest": "Submit Request",
+        "submitting": "Submitting..."
+      },
+      "validation": {
+        "fullNameRequired": "Full name is required",
+        "emailRequired": "Email is required",
+        "validEmail": "Please enter a valid email",
+        "phoneRequired": "Phone number is required",
+        "companyRequired": "Company/Facility name is required",
+        "businessTypeRequired": "Please select your business type",
+        "visitorsRequired": "Please select visitor count",
+        "vendingRequired": "Please indicate current vending status",
+        "contactMethodRequired": "Please select preferred contact method",
+        "bestTimeRequired": "Please select best time to contact",
+        "termsRequired": "You must agree to the terms to continue"
+      },
+      "success": {
+        "title": "Thank You for Your Interest!",
+        "message": "Your consultation request has been received. Our team will review your information and contact you within 24 hours to schedule your free consultation.",
+        "responseTime": "Expected Response Time:",
+        "responseValue": "Within 24 hours during business days",
+        "nextStepsTitle": "What happens next?",
+        "nextSteps": [
+          "Our wellness vending specialist will review your facility details",
+          "We'll prepare a customized recommendation based on your needs",
+          "You'll receive a call or email to schedule your consultation",
+          "We'll provide ROI projections specific to your facility"
+        ]
+      }
+    },
+    "common": {
+      "language": "Language"
+    }
+  },
+  "es": {
+    "nav": {
+      "home": "Inicio",
+      "about": "Acerca de",
+      "products": "Productos",
+      "benefits": "Beneficios",
+      "testimonials": "Testimonios",
+      "contact": "Contacto"
+    },
+    "home": {
+      "hero": {
+        "title": "Soluciones de Venta Inteligente para",
+        "titleAccent": "Instalaciones de Bienestar",
+        "description": "Mejora tu centro de fitness, spa o instalación de bienestar con máquinas expendedoras premium diseñadas específicamente para entornos conscientes de la salud. Aumenta los ingresos mientras sirves a los objetivos de bienestar de tu comunidad.",
+        "ctaPrimary": "Obtener Consulta Gratuita",
+        "ctaSecondary": "Ver Productos"
+      },
+      "benefits": {
+        "title": "¿Por Qué Elegir Kautivo?",
+        "subtitle": "Construido especialmente para la industria del bienestar con características que importan a tu negocio",
+        "revenue": {
+          "title": "Aumentar Ingresos",
+          "description": "Genera ingresos pasivos 24/7 con productos saludables de alto margen que tus miembros realmente quieren."
+        },
+        "convenience": {
+          "title": "Conveniencia para Miembros",
+          "description": "Proporciona nutrición post-entrenamiento y productos de bienestar exactamente cuando y donde los miembros los necesitan."
+        },
+        "analytics": {
+          "title": "Análisis Inteligente",
+          "description": "Rastrea ventas, inventario y preferencias de miembros con datos e insights en tiempo real."
+        }
+      },
+      "socialProof": {
+        "title": "Confiado por Instalaciones de Bienestar Líderes",
+        "facilities": "Instalaciones Atendidas",
+        "satisfaction": "Satisfacción del Cliente",
+        "revenue": "Aumento Promedio de Ingresos"
+      },
+      "cta": {
+        "title": "¿Listo para Transformar Tu Instalación?",
+        "subtitle": "Únete a cientos de instalaciones de bienestar que ya se benefician de soluciones de venta inteligente.",
+        "ctaPrimary": "Iniciar Prueba Gratuita",
+        "ctaSecondary": "Calcular ROI"
+      }
+    },
+    "about": {
+      "hero": {
+        "title": "Revolucionando el Bienestar a Través de Venta Inteligente",
+        "subtitle": "En Kautivo, creemos que las instalaciones de bienestar merecen soluciones de venta tan reflexivas y premium como los servicios que brindan."
+      },
+      "story": {
+        "title": "Nuestra Historia",
+        "paragraph1": "Fundada en 2020 por veteranos de la industria del bienestar, Kautivo surgió de una simple observación: las máquinas expendedoras tradicionales estaban fallando en servir las necesidades únicas de las instalaciones conscientes de la salud y sus miembros.",
+        "paragraph2": "Vimos a los usuarios del gimnasio conformándose con snacks procesados cuando necesitaban proteína limpia. Fuimos testigos de clientes de spa que se iban con las manos vacías cuando podrían haber llevado a casa productos premium de bienestar. Reconocimos que los propietarios de instalaciones estaban perdiendo oportunidades significativas de ingresos.",
+        "paragraph3": "Fue entonces cuando decidimos construir algo diferente: máquinas expendedoras diseñadas específicamente para la industria del bienestar, abastecidas con productos que se alinean con los valores de tu instalación y los objetivos de tus miembros."
+      },
+      "mission": {
+        "title": "Nuestra Misión",
+        "subtitle": "Empoderar a las instalaciones de bienestar con soluciones de venta inteligente que mejoren la experiencia del miembro mientras impulsan el crecimiento sostenible de ingresos.",
+        "purposeBuilt": {
+          "title": "🎯 Construido con Propósito",
+          "description": "Cada característica diseñada específicamente para entornos de bienestar y consumidores conscientes de la salud."
+        },
+        "partnership": {
+          "title": "🤝 Asociación",
+          "description": "No somos solo proveedores: somos socios invertidos en el éxito a largo plazo de tu instalación."
+        },
+        "growth": {
+          "title": "📈 Crecimiento",
+          "description": "Ayudando a las instalaciones a desbloquear nuevas fuentes de ingresos mientras sirven mejor a su comunidad."
+        }
+      },
+      "team": {
+        "title": "Equipo de Liderazgo",
+        "subtitle": "Expertos de la industria con profundos antecedentes en bienestar y tecnología",
+        "sarah": {
+          "name": "Sarah Johnson",
+          "title": "CEO y Co-Fundadora",
+          "description": "15+ años en operaciones de la industria del fitness y gestión de franquicias"
+        },
+        "michael": {
+          "name": "Michael Chen",
+          "title": "CTO y Co-Fundador",
+          "description": "Ex líder técnico en importantes empresas de tecnología de venta"
+        },
+        "lisa": {
+          "name": "Lisa Rodriguez",
+          "title": "VP de Éxito del Cliente",
+          "description": "Consultora de la industria del bienestar con 200+ asociaciones de instalaciones"
+        }
+      },
+      "certifications": {
+        "title": "Confianza y Certificaciones",
+        "fda": {
+          "title": "Cumple con FDA",
+          "description": "Todo el manejo y almacenamiento de alimentos cumple con los requisitos de la FDA"
+        },
+        "energyStar": {
+          "title": "Certificado Energy Star",
+          "description": "Ambientalmente responsable y energéticamente eficiente"
+        },
+        "pci": {
+          "title": "Cumple con PCI DSS",
+          "description": "Procesamiento seguro de pagos y protección de datos"
+        },
+        "ada": {
+          "title": "Accesible ADA",
+          "description": "Diseñado para accesibilidad universal"
+        }
+      }
+    },
+    "products": {
+      "hero": {
+        "title": "Máquinas Expendedoras Inteligentes Construidas para Bienestar",
+        "subtitle": "Elige de nuestra gama de soluciones de venta premium diseñadas específicamente para centros de fitness, spas e instalaciones de bienestar."
+      },
+      "labels": {
+        "idealFor": "Ideal para:",
+        "keyFeatures": "Características Clave",
+        "technicalSpecs": "Especificaciones Técnicas",
+        "dimensions": "Dimensiones:",
+        "weight": "Peso:",
+        "power": "Energía:",
+        "capacity": "Capacidad:",
+        "temperature": "Temperatura:",
+        "requestQuote": "Solicitar Cotización",
+        "calculateROI": "Calcular ROI",
+        "vendingMachine": "Máquina Expendedora",
+        "startingAt": "Desde"
+      },
+      "customization": {
+        "title": "Opciones de Personalización",
+        "subtitle": "Haz que tu máquina expendedora coincida con la marca y estética de tu instalación",
+        "branding": {
+          "title": "🎨 Marca y Gráficos",
+          "description": "Envolturas personalizadas, logos, colores y pantallas promocionales para coincidir con tu identidad de marca."
+        },
+        "software": {
+          "title": "📱 Integración de Software",
+          "description": "Conecta con tu sistema de gestión de miembros existente, programas de lealtad y aplicaciones."
+        },
+        "curation": {
+          "title": "🥗 Curación de Productos",
+          "description": "Te ayudamos a seleccionar la mezcla perfecta de productos basada en tu tipo de instalación y preferencias de miembros."
+        }
+      },
+      "comparison": {
+        "title": "Compara Nuestros Modelos",
+        "features": "Características",
+        "screenSize": "Tamaño de Pantalla",
+        "capacity": "Capacidad",
+        "temperatureZones": "Zonas de Temperatura",
+        "startingPrice": "Precio Inicial",
+        "values": {
+          "screenSizes": ["55\" 4K", "32\" HD", "36\" Premium"],
+          "capacities": ["120 productos", "60 productos", "80 productos"],
+          "temperatureZones": ["Dual", "Individual", "Ambiente"],
+          "prices": ["$8,500", "$5,500", "$12,000"]
+        }
+      },
+      "productData": {
+        "wellnessPro": {
+          "name": "Bienestar Pro",
+          "description": "Nuestro modelo insignia diseñado para centros de fitness premium e instalaciones de bienestar",
+          "price": "Desde $8,500",
+          "features": [
+            "Pantalla táctil 4K de 55 pulgadas",
+            "Capacidad de 120 productos con estantería ajustable",
+            "Zonas de temperatura dual (refrigerada y ambiente)",
+            "Pago sin contacto (NFC, billeteras móviles)",
+            "Seguimiento de inventario en tiempo real",
+            "Monitoreo remoto y análisis",
+            "Diseño compatible con ADA",
+            "Certificado Energy Star",
+            "Opciones de marca personalizadas"
+          ],
+          "idealFor": ["Centros de fitness grandes", "Spas premium", "Centros de bienestar corporativo"]
+        },
+        "fitnessCompact": {
+          "name": "Fitness Compacto",
+          "description": "Solución eficiente en espacio perfecta para estudios boutique e instalaciones más pequeñas",
+          "price": "Desde $5,500",
+          "features": [
+            "Pantalla táctil HD de 32 pulgadas",
+            "Capacidad de 60 productos",
+            "Zona de temperatura única (refrigerada o ambiente)",
+            "Soporte de pago sin contacto",
+            "Integración con aplicación móvil",
+            "Huella compacta",
+            "Diseño energéticamente eficiente",
+            "Opciones de envoltura personalizada"
+          ],
+          "idealFor": ["Estudios de fitness boutique", "Centros de yoga", "Gimnasios pequeños"]
+        },
+        "spaLuxury": {
+          "name": "Spa de Lujo",
+          "description": "Diseño elegante con acabados premium para entornos de bienestar de alta gama",
+          "price": "Desde $12,000",
+          "features": [
+            "Frente de vidrio templado con iluminación LED",
+            "Operación silenciosa",
+            "Exhibición premium de productos",
+            "Opciones de pago biométrico",
+            "Personalización de iluminación ambiental",
+            "Compatibilidad con productos de lujo",
+            "Modo de operación silenciosa",
+            "Materiales y acabados premium"
+          ],
+          "idealFor": ["Spas de lujo", "Centros de bienestar de alta gama", "Instalaciones de resort"]
+        }
+      }
+    },
+    "benefits": {
+      "hero": {
+        "title": "Beneficios Medibles para Tu Instalación de Bienestar",
+        "subtitle": "Descubre cómo las soluciones de venta inteligente pueden transformar la experiencia de tus miembros mientras generan ingresos adicionales significativos."
+      },
+      "overview": {
+        "title": "Resumen Completo de Beneficios"
+      },
+      "financial": {
+        "title": "💰 Beneficios Financieros",
+        "additionalRevenue": {
+          "title": "Flujo de Ingresos Adicional",
+          "description": "Genera $3,000-$8,000+ de ingresos pasivos mensuales con cero costos laborales"
+        },
+        "profitMargins": {
+          "title": "Márgenes de Ganancia Altos",
+          "description": "70-80% de márgenes de ganancia en productos de bienestar vs. 20-30% en venta típica"
+        },
+        "quickROI": {
+          "title": "ROI Rápido",
+          "description": "Período típico de recuperación de 8-14 meses con ganancias continuas después"
+        },
+        "revenueSharing": {
+          "title": "Compartir Ingresos",
+          "description": "Gana 70% de todas las ventas sin inversión en inventario o gestión requerida"
+        }
+      },
+      "memberExperience": {
+        "title": "🏃‍♀️ Experiencia del Miembro",
+        "convenience": {
+          "title": "Conveniencia 24/7",
+          "description": "Los miembros acceden a productos de nutrición y bienestar en cualquier momento, incluso cuando el personal no está disponible"
+        },
+        "nutrition": {
+          "title": "Nutrición Post-Entrenamiento",
+          "description": "Acceso inmediato a barras de proteína, bebidas de recuperación y snacks saludables"
+        },
+        "products": {
+          "title": "Productos de Bienestar",
+          "description": "Suplementos, accesorios de fitness y productos de salud alineados con la misión de tu instalación"
+        },
+        "contactless": {
+          "title": "Experiencia Sin Contacto",
+          "description": "Compras seguras e higiénicas con pagos móviles y opciones sin contacto"
+        }
+      },
+      "operational": {
+        "title": "📊 Ventajas Operacionales",
+        "zeroStaff": {
+          "title": "Cero Requisitos de Personal",
+          "description": "Operación completamente automatizada con monitoreo remoto y servicios de reabastecimiento"
+        },
+        "analytics": {
+          "title": "Análisis en Tiempo Real",
+          "description": "Rastrea ventas, productos populares y preferencias de miembros a través de reportes detallados"
+        },
+        "inventory": {
+          "title": "Gestión de Inventario",
+          "description": "Alertas automáticas y reabastecimiento programado previenen situaciones de falta de stock"
+        },
+        "branding": {
+          "title": "Mejora de Marca",
+          "description": "Opciones de marca personalizadas refuerzan la imagen profesional de tu instalación"
+        }
+      },
+      "caseStudies": {
+        "title": "Resultados Reales de Instalaciones Reales",
+        "eliteFitness": {
+          "name": "Centro Elite Fitness",
+          "type": "Gimnasio Premium • 2,500 miembros mensuales",
+          "revenue": "$6,800",
+          "payback": "11 meses",
+          "satisfaction": "95%",
+          "quote": "La máquina expendedora ha sido un cambio radical. Nuestros miembros aman la conveniencia, y estamos generando ingresos adicionales significativos con cero esfuerzo.",
+          "author": "- Sarah Mitchell, Propietaria",
+          "labels": {
+            "monthlyRevenue": "Ingresos Mensuales Promedio",
+            "paybackPeriod": "Período de Recuperación",
+            "satisfaction": "Satisfacción de Miembros"
+          }
+        },
+        "zenWellness": {
+          "name": "Spa Zen Wellness",
+          "type": "Spa de Lujo • 800 clientes mensuales",
+          "revenue": "$3,200",
+          "payback": "9 meses",
+          "increase": "42%",
+          "quote": "Nuestros clientes aprecian poder comprar productos premium de bienestar después de sus tratamientos. Ha extendido nuestras ofertas de venta hermosamente.",
+          "author": "- David Chen, Director de Spa",
+          "labels": {
+            "monthlyRevenue": "Ingresos Mensuales Promedio",
+            "paybackPeriod": "Período de Recuperación",
+            "revenueIncrease": "Aumento de Ingresos"
+          }
+        }
+      },
+      "competitive": {
+        "title": "¿Por Qué Kautivo vs. Venta Tradicional?",
+        "features": {
+          "feature": "Característica",
+          "kautivo": "Venta Inteligente Kautivo",
+          "traditional": "Venta Tradicional"
+        },
+        "comparison": {
+          "productFocus": {
+            "name": "Enfoque de Productos",
+            "kautivo": "✅ Productos de salud y bienestar",
+            "traditional": "❌ Snacks procesados y sodas"
+          },
+          "profitMargins": {
+            "name": "Márgenes de Ganancia",
+            "kautivo": "✅ Márgenes del 70-80%",
+            "traditional": "❌ Márgenes del 20-30%"
+          },
+          "brandAlignment": {
+            "name": "Alineación de Marca",
+            "kautivo": "✅ Apoya la misión de bienestar",
+            "traditional": "❌ Contradice objetivos de salud"
+          },
+          "technology": {
+            "name": "Tecnología",
+            "kautivo": "✅ Análisis inteligente y monitoreo",
+            "traditional": "❌ Funcionalidad básica"
+          },
+          "memberExperience": {
+            "name": "Experiencia del Miembro",
+            "kautivo": "✅ Interfaz premium sin contacto",
+            "traditional": "❌ Desactualizada, poco confiable"
+          }
+        }
+      },
+      "cta": {
+        "title": "¿Listo para Desbloquear Estos Beneficios?",
+        "subtitle": "Únete a cientos de instalaciones de bienestar que ya están maximizando su potencial de ingresos.",
+        "primaryBtn": "Programar Consulta Gratuita",
+        "secondaryBtn": "Leer Más Historias de Éxito"
+      }
+    },
+    "roiCalculator": {
+      "title": "Calcula Tu ROI Potencial",
+      "form": {
+        "facilityType": "Tipo de Instalación",
+        "monthlyVisitors": "Visitantes Mensuales",
+        "averageSpend": "Gasto Promedio Esperado por Cliente",
+        "operatingHours": "Horas de Operación Diarias",
+        "currentRevenue": "Ingresos Mensuales Actuales de Venta (Opcional)",
+        "currentRevenuePlaceholder": "Ingresa los ingresos mensuales actuales",
+        "calculateButton": "Calcular ROI"
+      },
+      "facilityTypes": {
+        "fitnessCenter": "Centro de Fitness/Gimnasio",
+        "yogaStudio": "Estudio de Yoga/Pilates", 
+        "spa": "Spa/Centro de Bienestar",
+        "pool": "Piscina/Centro Acuático",
+        "rehabilitation": "Clínica de Rehabilitación",
+        "coworking": "Espacio de Coworking"
+      },
+      "visitorRanges": {
+        "range1": "0-500 visitantes",
+        "range2": "500-1,000 visitantes",
+        "range3": "1,000-2,000 visitantes",
+        "range4": "2,000-5,000 visitantes",
+        "range5": "5,000+ visitantes"
+      },
+      "spendRanges": {
+        "range1": "$2-4 por visita",
+        "range2": "$4-6 por visita",
+        "range3": "$6-8 por visita",
+        "range4": "$8-12 por visita",
+        "range5": "$12+ por visita"
+      },
+      "hoursRanges": {
+        "range1": "8-12 horas",
+        "range2": "12-16 horas", 
+        "range3": "16-20 horas",
+        "range4": "20-24 horas"
+      },
+      "results": {
+        "title": "Tus Resultados Proyectados",
+        "monthlyRevenue": "Ingresos Mensuales Estimados",
+        "annualRevenue": "Ingresos Anuales Proyectados",
+        "paybackPeriod": "Período de Recuperación de Inversión",
+        "firstYearProfit": "Ganancia Neta del Primer Año",
+        "months": "meses"
+      },
+      "assumptions": {
+        "title": "Supuestos del Cálculo:",
+        "purchaseRate": "15% de los visitantes hacen una compra (promedio de la industria)",
+        "machineInvestment": "Inversión en máquina: $",
+        "operatingCosts": "Costos operativos mensuales: $200 (reabastecimiento, mantenimiento, tarifas de procesamiento)",
+        "revenueSharing": "Compartir ingresos con la instalación: 70% instalación / 30% Kautivo"
+      },
+      "nextSteps": {
+        "title": "¿Listo para comenzar?",
+        "button": "Obtener Consulta Gratuita"
+      }
+    },
+    "testimonials": {
+      "hero": {
+        "title": "Historias de Éxito de Nuestros Socios",
+        "subtitle": "Descubre cómo las instalaciones de bienestar en todo el país están transformando la experiencia de sus miembros e ingresos con las soluciones de venta inteligente de Kautivo."
+      },
+      "stats": {
+        "facilitiesServed": "Instalaciones Atendidas",
+        "customerSatisfaction": "Satisfacción del Cliente",
+        "revenueGenerated": "Ingresos Generados",
+        "averageIncrease": "Aumento Promedio de Ingresos"
+      },
+      "filters": {
+        "title": "Filtrar por Tipo de Instalación:",
+        "all": "Todas las Instalaciones",
+        "gym": "Gimnasios y Centros de Fitness",
+        "spa": "Spas y Centros de Bienestar",
+        "yoga": "Estudios de Yoga y Pilates",
+        "corporate": "Bienestar Corporativo",
+        "pool": "Centros Acuáticos"
+      },
+      "labels": {
+        "monthlyRevenue": "Ingresos Mensuales",
+        "paybackPeriod": "Período de Recuperación",
+        "featured": "Destacado ★",
+        "readMore": "Haz clic para leer la historia completa →"
+      },
+      "featuredStory": {
+        "title": "Historia de Éxito Destacada",
+        "keyFactors": "Factores Clave de Éxito:",
+        "beforeKautivo": "Antes de Kautivo:",
+        "afterKautivo": "Después de Kautivo:"
+      },
+      "videoSection": {
+        "title": "Testimonios en Video",
+        "subtitle": "Escucha directamente de nuestros socios satisfechos",
+        "video1": {
+          "title": "Tour del Centro Elite Fitness",
+          "description": "Ve cómo el Wellness Pro se integra perfectamente en un ambiente de gimnasio premium"
+        },
+        "video2": {
+          "title": "Experiencia del Spa Zen Wellness",
+          "description": "Descubre cómo los spas de lujo mejoran la experiencia del cliente con venta inteligente"
+        }
+      },
+      "cta": {
+        "title": "¿Listo para Unirte a Nuestras Historias de Éxito?",
+        "subtitle": "Déjanos ayudarte a crear tu propia historia de éxito de instalación de bienestar.",
+        "primaryBtn": "Obtén Tu Consulta Gratuita",
+        "secondaryBtn": "Calcula Tu ROI"
+      },
+      "testimonialData": {
+        "eliteFitness": {
+          "facilityType": "Gimnasio Premium",
+          "memberCount": "2,500+ miembros",
+          "quote": "La máquina expendedora Kautivo ha sido un cambio completo del juego para nuestra instalación. Nuestros miembros absolutamente aman la conveniencia de tomar barras de proteína de alta calidad y bebidas de recuperación justo después de sus entrenamientos. Estamos generando casi $7,000 en ingresos mensuales adicionales con literalmente cero esfuerzo de nuestra parte. La máquina es hermosa, confiable y combina perfectamente con nuestra estética de marca premium.",
+          "highlights": [
+            "Aumentó los puntajes de satisfacción de miembros en 23%",
+            "Generó $81,600 en ingresos del primer año",
+            "Cero tiempo de personal requerido para gestión",
+            "Integración perfecta con el diseño de la instalación"
+          ],
+          "beforeAfter": {
+            "before": "Sin opciones de venta para nutrición post-entrenamiento",
+            "after": "Acceso 24/7 a productos premium de bienestar"
+          }
+        },
+        "zenWellness": {
+          "facilityType": "Spa de Lujo",
+          "memberCount": "800 clientes mensuales",
+          "quote": "Nuestros clientes esperan experiencias premium en cada aspecto de su visita, y la máquina Kautivo entrega exactamente eso. El diseño elegante encaja perfectamente en nuestro ambiente sereno, y la selección curada de productos de bienestar extiende nuestras ofertas de venta hermosamente. Los clientes a menudo compran suplementos y productos de aromaterapia después de sus tratamientos, creando un viaje de bienestar sin interrupciones.",
+          "highlights": [
+            "42% de aumento en ingresos totales de la instalación",
+            "Experiencia y satisfacción del cliente mejorada",
+            "Selección de productos premium se alinea con valores del spa",
+            "Operación silenciosa mantiene atmósfera tranquila"
+          ],
+          "beforeAfter": {
+            "before": "Espacio de venta limitado para productos de bienestar",
+            "after": "Oferta de productos expandida sin personal adicional"
+          }
+        },
+        "crossfitDowntown": {
+          "facilityType": "Box de CrossFit",
+          "memberCount": "450 miembros",
+          "quote": "Nuestros atletas de CrossFit queman calorías y necesitan nutrición post-entrenamiento inmediata. La máquina Kautivo almacena exactamente lo que necesitan: barras de proteína, BCAAs y bebidas de recuperación. Los análisis en tiempo real nos ayudan a entender qué productos prefieren más nuestros atletas, y hemos podido optimizar nuestro inventario en consecuencia. Es como tener una tienda de nutrición 24/7 que se maneja sola.",
+          "highlights": [
+            "Popular con atletas competitivos y guerreros de fin de semana",
+            "Los análisis revelaron preferencias de productos inesperadas",
+            "Redujo quejas de miembros sobre opciones de nutrición",
+            "ROI fuerte a pesar de base de miembros más pequeña"
+          ],
+          "beforeAfter": {
+            "before": "Los miembros tenían que salir de la instalación para nutrición post-entrenamiento",
+            "after": "Solución de nutrición completa en el sitio"
+          }
+        },
+        "yogaSanctuary": {
+          "facilityType": "Estudio de Yoga",
+          "memberCount": "320 miembros",
+          "quote": "Inicialmente estábamos preocupados por agregar cualquier tecnología a nuestro espacio pacífico, pero el equipo de Kautivo trabajó con nosotros para personalizar la máquina para que encajara perfectamente con nuestra estética. La iluminación suave y operación silenciosa mantienen la atmósfera tranquila de nuestro estudio. Nuestros estudiantes aman tener acceso a barras de energía orgánicas y tés herbales, especialmente después de nuestros talleres más largos y entrenamientos de maestros.",
+          "highlights": [
+            "Integración de diseño personalizado con estética del estudio",
+            "Enfoque en productos orgánicos y naturales",
+            "Popular durante intensivos de entrenamiento de maestros",
+            "Experiencia estudiantil mejorada sin interrupción"
+          ],
+          "beforeAfter": {
+            "before": "Sin opciones de comida o bebida para sesiones largas",
+            "after": "Opciones nutritivas que apoyan la práctica"
+          }
+        },
+        "corporateWellness": {
+          "facilityType": "Bienestar Corporativo",
+          "memberCount": "1,200 empleados",
+          "quote": "El bienestar de los empleados es una prioridad principal para nuestra empresa, y la máquina Kautivo apoya perfectamente nuestras iniciativas. Nuestros empleados aprecian tener opciones de snacks saludables y suplementos justo en nuestro centro de bienestar. La apariencia profesional de la máquina y operación confiable se alinean con nuestros estándares corporativos, y los ingresos ayudan a compensar los costos de nuestro programa de bienestar.",
+          "highlights": [
+            "Apoya iniciativas de bienestar corporativo",
+            "Apariencia profesional encaja en ambiente corporativo",
+            "Los ingresos ayudan a financiar programas adicionales de bienestar",
+            "Altas tasas de satisfacción y uso de empleados"
+          ],
+          "beforeAfter": {
+            "before": "Opciones saludables limitadas en cafetería de la empresa",
+            "after": "Centro dedicado de nutrición de bienestar"
+          }
+        },
+        "aquaticCenter": {
+          "facilityType": "Piscina",
+          "memberCount": "600 visitantes diarios",
+          "quote": "Los nadadores y participantes de aeróbicos acuáticos a menudo desarrollan bastante apetito, pero nunca tuvimos buenas opciones para nutrición post-natación. La máquina Kautivo resolvió esto perfectamente con barras de proteína resistentes al agua, bebidas de electrolitos y snacks saludables. El diseño resistente a la humedad de la máquina funciona genial en nuestro ambiente de piscina, y el mantenimiento ha sido virtualmente inexistente.",
+          "highlights": [
+            "Diseño resistente a la humedad perfecto para ambiente de piscina",
+            "Popular con nadadores competitivos y usuarios casuales",
+            "Mantenimiento mínimo a pesar del ambiente desafiante",
+            "Satisfacción general del visitante mejorada"
+          ],
+          "beforeAfter": {
+            "before": "Los nadadores se iban hambrientos después de sesiones de entrenamiento",
+            "after": "Solución completa de nutrición post-natación"
+          }
+        }
+      }
+    },
+    "contact": {
+      "hero": {
+        "title": "Obtén Tu Consulta Gratuita",
+        "subtitle": "¿Listo para transformar tu instalación de bienestar con soluciones de venta inteligente? Hablemos de tus necesidades específicas y creemos un plan personalizado."
+      },
+      "whyConsultation": {
+        "title": "¿Por Qué Elegir una Consulta Gratuita?",
+        "assessment": {
+          "title": "Evaluación Personalizada",
+          "description": "Analizamos el diseño único de tu instalación, patrones de tráfico y demografía de miembros"
+        },
+        "roi": {
+          "title": "Proyecciones de ROI",
+          "description": "Obtén proyecciones detalladas de ingresos basadas en las métricas específicas de tu instalación"
+        },
+        "planning": {
+          "title": "Planificación de Implementación",
+          "description": "Recibe una hoja de ruta completa para instalación y curación de productos"
+        },
+        "noObligation": {
+          "title": "Sin Obligación",
+          "description": "Obtén insights y recomendaciones de expertos sin presión para comprometerte"
+        }
+      },
+      "contactMethods": {
+        "title": "Ponte en Contacto Directamente",
+        "email": "📧 Email:",
+        "phone": "📞 Teléfono:",
+        "hours": "🕒 Horarios:",
+        "responseTime": "⚡ Tiempo de Respuesta:",
+        "hoursValue": "Lunes-Viernes 9AM-6PM EST",
+        "responseValue": "Dentro de 24 horas"
+      },
+      "process": {
+        "title": "Nuestro Proceso de Consulta",
+        "subtitle": "Un proceso simple y transparente diseñado alrededor de tu horario",
+        "step1": {
+          "title": "Contacto Inicial",
+          "description": "Envía tu información y nos pondremos en contacto dentro de 24 horas para programar tu consulta",
+          "duration": "Respuesta el mismo día"
+        },
+        "step2": {
+          "title": "Evaluación de Instalación",
+          "description": "Llamada de video de 30 minutos o visita en persona para entender tu espacio, miembros y objetivos",
+          "duration": "30-45 minutos"
+        },
+        "step3": {
+          "title": "Propuesta Personalizada",
+          "description": "Recomendación detallada con proyecciones de ROI, selección de productos y cronograma de implementación",
+          "duration": "3-5 días hábiles"
+        },
+        "step4": {
+          "title": "Decisión y Configuración",
+          "description": "Si eliges proceder, manejamos todo desde la instalación hasta el abastecimiento inicial",
+          "duration": "2-3 semanas"
+        }
+      },
+      "faq": {
+        "title": "Preguntas Frecuentes",
+        "q1": {
+          "question": "¿Qué incluye la consulta?",
+          "answer": "Una evaluación integral de la instalación, análisis demográfico de miembros, proyecciones de ROI, recomendaciones de productos y un plan de implementación detallado."
+        },
+        "q2": {
+          "question": "¿Realmente no hay costo u obligación?",
+          "answer": "Absolutamente ninguno. Creemos en demostrar valor primero. Recibirás insights accionables sin importar si eliges trabajar con nosotros."
+        },
+        "q3": {
+          "question": "¿Cuánto tiempo antes de ver ROI?",
+          "answer": "La mayoría de las instalaciones ven flujo de efectivo positivo dentro de 2-3 meses y ROI completo dentro de 8-14 meses, dependiendo del tamaño y tráfico."
+        },
+        "q4": {
+          "question": "¿Qué soporte continuo proporcionan?",
+          "answer": "Soporte continuo completo incluyendo reabastecimiento, mantenimiento, reportes de análisis y soporte técnico 24/7."
+        },
+        "q5": {
+          "question": "¿Pueden trabajar con contratos existentes?",
+          "answer": "Sí, a menudo podemos trabajar alrededor de contratos de venta existentes o ayudarte a hacer la transición cuando expiren los contratos."
+        },
+        "q6": {
+          "question": "¿Qué pasa si mi instalación es muy pequeña?",
+          "answer": "Trabajamos con instalaciones de todos los tamaños. Incluso estudios más pequeños pueden beneficiarse de nuestros modelos compactos y arreglos flexibles."
+        }
+      }
+    },
+    "footer": {
+      "tagline": "Soluciones de venta inteligente para instalaciones de bienestar en todo el mundo.",
+      "sections": {
+        "solutions": "Soluciones",
+        "company": "Empresa",
+        "contact": "Contacto"
+      },
+      "links": {
+        "vendingMachines": "Máquinas Expendedoras Inteligentes",
+        "roiCalculator": "Calculadora de ROI",
+        "caseStudies": "Casos de Estudio",
+        "aboutUs": "Acerca de Nosotros",
+        "contact": "Contacto",
+        "privacy": "Política de Privacidad",
+        "terms": "Términos de Servicio"
+      },
+      "contactInfo": {
+        "email": "Email: info@kautivo.com",
+        "phone": "Teléfono: +1 (555) 123-4567",
+        "hours": "Horarios: Lun-Vie 9AM-6PM EST"
+      },
+      "copyright": "© 2024 Kautivo. Todos los derechos reservados."
+    },
+    "contactForm": {
+      "progress": {
+        "step1": "1. Info de Contacto",
+        "step2": "2. Detalles del Negocio", 
+        "step3": "3. Preferencias"
+      },
+      "step1": {
+        "title": "Información de Contacto",
+        "fullName": "Nombre Completo",
+        "businessEmail": "Email Empresarial",
+        "phoneNumber": "Número de Teléfono",
+        "phonePlaceholder": "(555) 123-4567",
+        "companyName": "Nombre de Empresa/Instalación"
+      },
+      "step2": {
+        "title": "Detalles del Negocio",
+        "businessType": "Tipo de Negocio",
+        "monthlyVisitors": "Conteo de Visitantes Mensuales",
+        "currentVending": "¿Actualmente tienen máquinas expendedoras?",
+        "yes": "Sí",
+        "no": "No"
+      },
+      "step3": {
+        "title": "Preferencias de Contacto",
+        "contactMethod": "Método de Contacto Preferido",
+        "bestTime": "Mejor Momento para Contactar",
+        "requirements": "Requisitos o Preguntas Adicionales",
+        "requirementsPlaceholder": "Cuéntanos sobre cualquier necesidad específica, limitaciones de espacio o preguntas que tengas...",
+        "termsAgreement": "Acepto ser contactado por Kautivo sobre soluciones de venta y entiendo que mi información será utilizada de acuerdo con la política de privacidad."
+      },
+      "businessTypes": {
+        "fitnessCenter": "Centro de Fitness/Gimnasio",
+        "yogaStudio": "Estudio de Yoga/Pilates",
+        "spa": "Spa/Centro de Bienestar",
+        "pool": "Piscina/Centro Acuático",
+        "rehabilitation": "Clínica de Rehabilitación",
+        "coworking": "Espacio de Coworking",
+        "other": "Otro"
+      },
+      "visitorRanges": {
+        "range1": "0-500 visitantes mensuales",
+        "range2": "500-1,000 visitantes mensuales",
+        "range3": "1,000-2,000 visitantes mensuales",
+        "range4": "2,000-5,000 visitantes mensuales",
+        "range5": "5,000+ visitantes mensuales"
+      },
+      "contactMethods": {
+        "email": "Email",
+        "phone": "Llamada Telefónica",
+        "either": "Email o Teléfono"
+      },
+      "bestTimes": {
+        "morning": "Mañana (9 AM - 12 PM)",
+        "afternoon": "Tarde (12 PM - 5 PM)",
+        "evening": "Noche (5 PM - 8 PM)",
+        "anytime": "Cualquier momento"
+      },
+      "buttons": {
+        "previous": "Anterior",
+        "nextStep": "Siguiente Paso",
+        "submitRequest": "Enviar Solicitud",
+        "submitting": "Enviando..."
+      },
+      "validation": {
+        "fullNameRequired": "Nombre completo es requerido",
+        "emailRequired": "Email es requerido",
+        "validEmail": "Por favor ingresa un email válido",
+        "phoneRequired": "Número de teléfono es requerido",
+        "companyRequired": "Nombre de empresa/instalación es requerido",
+        "businessTypeRequired": "Por favor selecciona tu tipo de negocio",
+        "visitorsRequired": "Por favor selecciona el conteo de visitantes",
+        "vendingRequired": "Por favor indica el estado actual de máquinas expendedoras",
+        "contactMethodRequired": "Por favor selecciona el método de contacto preferido",
+        "bestTimeRequired": "Por favor selecciona el mejor momento para contactar",
+        "termsRequired": "Debes aceptar los términos para continuar"
+      },
+      "success": {
+        "title": "¡Gracias por Tu Interés!",
+        "message": "Tu solicitud de consulta ha sido recibida. Nuestro equipo revisará tu información y te contactará dentro de 24 horas para programar tu consulta gratuita.",
+        "responseTime": "Tiempo de Respuesta Esperado:",
+        "responseValue": "Dentro de 24 horas durante días hábiles",
+        "nextStepsTitle": "¿Qué sigue?",
+        "nextSteps": [
+          "Nuestro especialista en venta de bienestar revisará los detalles de tu instalación",
+          "Prepararemos una recomendación personalizada basada en tus necesidades",
+          "Recibirás una llamada o email para programar tu consulta",
+          "Proporcionaremos proyecciones de ROI específicas para tu instalación"
+        ]
+      }
+    },
+    "common": {
+      "language": "Idioma"
+    }
+  }
+}

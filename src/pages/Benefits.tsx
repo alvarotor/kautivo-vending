@@ -1,16 +1,18 @@
 import { ROICalculator } from '../components/ROICalculator'
 import { Button } from '../components/Button'
+import { useI18n } from '../utils/i18n'
 
 export function Benefits() {
+  const { t } = useI18n()
+  
   return (
     <div class="benefits">
       <section class="hero-section section">
         <div class="container">
           <div class="text-center">
-            <h1 class="fade-in">Measurable Benefits for Your Wellness Facility</h1>
+            <h1 class="fade-in">{t('benefits.hero.title')}</h1>
             <p class="text-large fade-in">
-              Discover how smart vending solutions can transform your member experience 
-              while generating significant additional revenue.
+              {t('benefits.hero.subtitle')}
             </p>
           </div>
         </div>
@@ -25,72 +27,72 @@ export function Benefits() {
       <section class="benefits-detailed section">
         <div class="container">
           <div class="text-center">
-            <h2 class="fade-in">Complete Benefits Overview</h2>
+            <h2 class="fade-in">{t('benefits.overview.title')}</h2>
           </div>
           
           <div class="benefits-grid fade-in">
             <div class="benefit-category">
-              <h3>💰 Financial Benefits</h3>
+              <h3>{t('benefits.financial.title')}</h3>
               <div class="benefit-items">
                 <div class="benefit-item">
-                  <h4>Additional Revenue Stream</h4>
-                  <p>Generate $3,000-$8,000+ monthly passive income with zero labor costs</p>
+                  <h4>{t('benefits.financial.additionalRevenue.title')}</h4>
+                  <p>{t('benefits.financial.additionalRevenue.description')}</p>
                 </div>
                 <div class="benefit-item">
-                  <h4>High Profit Margins</h4>
-                  <p>70-80% profit margins on wellness products vs. 20-30% on typical retail</p>
+                  <h4>{t('benefits.financial.profitMargins.title')}</h4>
+                  <p>{t('benefits.financial.profitMargins.description')}</p>
                 </div>
                 <div class="benefit-item">
-                  <h4>Quick ROI</h4>
-                  <p>Typical payback period of 8-14 months with continued profit thereafter</p>
+                  <h4>{t('benefits.financial.quickROI.title')}</h4>
+                  <p>{t('benefits.financial.quickROI.description')}</p>
                 </div>
                 <div class="benefit-item">
-                  <h4>Revenue Sharing</h4>
-                  <p>Earn 70% of all sales with no inventory investment or management required</p>
+                  <h4>{t('benefits.financial.revenueSharing.title')}</h4>
+                  <p>{t('benefits.financial.revenueSharing.description')}</p>
                 </div>
               </div>
             </div>
 
             <div class="benefit-category">
-              <h3>🏃‍♀️ Member Experience</h3>
+              <h3>{t('benefits.memberExperience.title')}</h3>
               <div class="benefit-items">
                 <div class="benefit-item">
-                  <h4>24/7 Convenience</h4>
-                  <p>Members access nutrition and wellness products anytime, even when staff isn't available</p>
+                  <h4>{t('benefits.memberExperience.convenience.title')}</h4>
+                  <p>{t('benefits.memberExperience.convenience.description')}</p>
                 </div>
                 <div class="benefit-item">
-                  <h4>Post-Workout Nutrition</h4>
-                  <p>Immediate access to protein bars, recovery drinks, and healthy snacks</p>
+                  <h4>{t('benefits.memberExperience.nutrition.title')}</h4>
+                  <p>{t('benefits.memberExperience.nutrition.description')}</p>
                 </div>
                 <div class="benefit-item">
-                  <h4>Wellness Products</h4>
-                  <p>Supplements, fitness accessories, and health products aligned with your facility's mission</p>
+                  <h4>{t('benefits.memberExperience.products.title')}</h4>
+                  <p>{t('benefits.memberExperience.products.description')}</p>
                 </div>
                 <div class="benefit-item">
-                  <h4>Contactless Experience</h4>
-                  <p>Safe, hygienic purchasing with mobile payments and touchless options</p>
+                  <h4>{t('benefits.memberExperience.contactless.title')}</h4>
+                  <p>{t('benefits.memberExperience.contactless.description')}</p>
                 </div>
               </div>
             </div>
 
             <div class="benefit-category">
-              <h3>📊 Operational Advantages</h3>
+              <h3>{t('benefits.operational.title')}</h3>
               <div class="benefit-items">
                 <div class="benefit-item">
-                  <h4>Zero Staff Requirements</h4>
-                  <p>Fully automated operation with remote monitoring and restocking services</p>
+                  <h4>{t('benefits.operational.zeroStaff.title')}</h4>
+                  <p>{t('benefits.operational.zeroStaff.description')}</p>
                 </div>
                 <div class="benefit-item">
-                  <h4>Real-Time Analytics</h4>
-                  <p>Track sales, popular products, and member preferences through detailed reporting</p>
+                  <h4>{t('benefits.operational.analytics.title')}</h4>
+                  <p>{t('benefits.operational.analytics.description')}</p>
                 </div>
                 <div class="benefit-item">
-                  <h4>Inventory Management</h4>
-                  <p>Automatic alerts and scheduled restocking prevent out-of-stock situations</p>
+                  <h4>{t('benefits.operational.inventory.title')}</h4>
+                  <p>{t('benefits.operational.inventory.description')}</p>
                 </div>
                 <div class="benefit-item">
-                  <h4>Brand Enhancement</h4>
-                  <p>Custom branding options reinforce your facility's professional image</p>
+                  <h4>{t('benefits.operational.branding.title')}</h4>
+                  <p>{t('benefits.operational.branding.description')}</p>
                 </div>
               </div>
             </div>
@@ -101,60 +103,58 @@ export function Benefits() {
       <section class="case-studies section section-alt">
         <div class="container">
           <div class="text-center">
-            <h2 class="fade-in">Real Results from Real Facilities</h2>
+            <h2 class="fade-in">{t('benefits.caseStudies.title')}</h2>
           </div>
           
           <div class="grid grid-2 fade-in">
             <div class="case-study card">
               <div class="case-study-header">
-                <h3>Elite Fitness Center</h3>
-                <span class="facility-type">Premium Gym • 2,500 monthly members</span>
+                <h3>{t('benefits.caseStudies.eliteFitness.name')}</h3>
+                <span class="facility-type">{t('benefits.caseStudies.eliteFitness.type')}</span>
               </div>
               <div class="case-study-results">
                 <div class="result">
-                  <span class="result-number">$6,800</span>
-                  <span class="result-label">Average Monthly Revenue</span>
+                  <span class="result-number">{t('benefits.caseStudies.eliteFitness.revenue')}</span>
+                  <span class="result-label">{t('benefits.caseStudies.eliteFitness.labels.monthlyRevenue')}</span>
                 </div>
                 <div class="result">
-                  <span class="result-number">11 months</span>
-                  <span class="result-label">Payback Period</span>
+                  <span class="result-number">{t('benefits.caseStudies.eliteFitness.payback')}</span>
+                  <span class="result-label">{t('benefits.caseStudies.eliteFitness.labels.paybackPeriod')}</span>
                 </div>
                 <div class="result">
-                  <span class="result-number">95%</span>
-                  <span class="result-label">Member Satisfaction</span>
+                  <span class="result-number">{t('benefits.caseStudies.eliteFitness.satisfaction')}</span>
+                  <span class="result-label">{t('benefits.caseStudies.eliteFitness.labels.satisfaction')}</span>
                 </div>
               </div>
               <p class="case-study-quote">
-                "The vending machine has been a game-changer. Our members love the convenience, 
-                and we're generating significant additional revenue with zero effort."
+                "{t('benefits.caseStudies.eliteFitness.quote')}"
               </p>
-              <span class="quote-author">- Sarah Mitchell, Owner</span>
+              <span class="quote-author">{t('benefits.caseStudies.eliteFitness.author')}</span>
             </div>
 
             <div class="case-study card">
               <div class="case-study-header">
-                <h3>Zen Wellness Spa</h3>
-                <span class="facility-type">Luxury Spa • 800 monthly clients</span>
+                <h3>{t('benefits.caseStudies.zenWellness.name')}</h3>
+                <span class="facility-type">{t('benefits.caseStudies.zenWellness.type')}</span>
               </div>
               <div class="case-study-results">
                 <div class="result">
-                  <span class="result-number">$3,200</span>
-                  <span class="result-label">Average Monthly Revenue</span>
+                  <span class="result-number">{t('benefits.caseStudies.zenWellness.revenue')}</span>
+                  <span class="result-label">{t('benefits.caseStudies.zenWellness.labels.monthlyRevenue')}</span>
                 </div>
                 <div class="result">
-                  <span class="result-number">9 months</span>
-                  <span class="result-label">Payback Period</span>
+                  <span class="result-number">{t('benefits.caseStudies.zenWellness.payback')}</span>
+                  <span class="result-label">{t('benefits.caseStudies.zenWellness.labels.paybackPeriod')}</span>
                 </div>
                 <div class="result">
-                  <span class="result-number">42%</span>
-                  <span class="result-label">Revenue Increase</span>
+                  <span class="result-number">{t('benefits.caseStudies.zenWellness.increase')}</span>
+                  <span class="result-label">{t('benefits.caseStudies.zenWellness.labels.revenueIncrease')}</span>
                 </div>
               </div>
               <p class="case-study-quote">
-                "Our clients appreciate being able to purchase premium wellness products 
-                after their treatments. It's extended our retail offerings beautifully."
+                "{t('benefits.caseStudies.zenWellness.quote')}"
               </p>
-              <span class="quote-author">- David Chen, Spa Director</span>
+              <span class="quote-author">{t('benefits.caseStudies.zenWellness.author')}</span>
             </div>
           </div>
         </div>
@@ -163,44 +163,44 @@ export function Benefits() {
       <section class="competitive-advantage section">
         <div class="container">
           <div class="text-center">
-            <h2 class="fade-in">Why Kautivo vs. Traditional Vending?</h2>
+            <h2 class="fade-in">{t('benefits.competitive.title')}</h2>
           </div>
           
           <div class="comparison-table fade-in">
             <div class="comparison-header">
-              <div class="feature-column">Feature</div>
-              <div class="kautivo-column">Kautivo Smart Vending</div>
-              <div class="traditional-column">Traditional Vending</div>
+              <div class="feature-column">{t('benefits.competitive.features.feature')}</div>
+              <div class="kautivo-column">{t('benefits.competitive.features.kautivo')}</div>
+              <div class="traditional-column">{t('benefits.competitive.features.traditional')}</div>
             </div>
             
             <div class="comparison-row">
-              <div class="feature-name">Product Focus</div>
-              <div class="kautivo-value">✅ Health & wellness products</div>
-              <div class="traditional-value">❌ Processed snacks & sodas</div>
+              <div class="feature-name">{t('benefits.competitive.comparison.productFocus.name')}</div>
+              <div class="kautivo-value">{t('benefits.competitive.comparison.productFocus.kautivo')}</div>
+              <div class="traditional-value">{t('benefits.competitive.comparison.productFocus.traditional')}</div>
             </div>
             
             <div class="comparison-row">
-              <div class="feature-name">Profit Margins</div>
-              <div class="kautivo-value">✅ 70-80% margins</div>
-              <div class="traditional-value">❌ 20-30% margins</div>
+              <div class="feature-name">{t('benefits.competitive.comparison.profitMargins.name')}</div>
+              <div class="kautivo-value">{t('benefits.competitive.comparison.profitMargins.kautivo')}</div>
+              <div class="traditional-value">{t('benefits.competitive.comparison.profitMargins.traditional')}</div>
             </div>
             
             <div class="comparison-row">
-              <div class="feature-name">Brand Alignment</div>
-              <div class="kautivo-value">✅ Supports wellness mission</div>
-              <div class="traditional-value">❌ Contradicts health goals</div>
+              <div class="feature-name">{t('benefits.competitive.comparison.brandAlignment.name')}</div>
+              <div class="kautivo-value">{t('benefits.competitive.comparison.brandAlignment.kautivo')}</div>
+              <div class="traditional-value">{t('benefits.competitive.comparison.brandAlignment.traditional')}</div>
             </div>
             
             <div class="comparison-row">
-              <div class="feature-name">Technology</div>
-              <div class="kautivo-value">✅ Smart analytics & monitoring</div>
-              <div class="traditional-value">❌ Basic functionality</div>
+              <div class="feature-name">{t('benefits.competitive.comparison.technology.name')}</div>
+              <div class="kautivo-value">{t('benefits.competitive.comparison.technology.kautivo')}</div>
+              <div class="traditional-value">{t('benefits.competitive.comparison.technology.traditional')}</div>
             </div>
             
             <div class="comparison-row">
-              <div class="feature-name">Member Experience</div>
-              <div class="kautivo-value">✅ Premium, touchless interface</div>
-              <div class="traditional-value">❌ Outdated, unreliable</div>
+              <div class="feature-name">{t('benefits.competitive.comparison.memberExperience.name')}</div>
+              <div class="kautivo-value">{t('benefits.competitive.comparison.memberExperience.kautivo')}</div>
+              <div class="traditional-value">{t('benefits.competitive.comparison.memberExperience.traditional')}</div>
             </div>
           </div>
         </div>
@@ -209,13 +209,13 @@ export function Benefits() {
       <section class="cta-section section section-alt">
         <div class="container">
           <div class="text-center">
-            <h2 class="fade-in">Ready to Unlock These Benefits?</h2>
+            <h2 class="fade-in">{t('benefits.cta.title')}</h2>
             <p class="text-large fade-in">
-              Join hundreds of wellness facilities already maximizing their revenue potential.
+              {t('benefits.cta.subtitle')}
             </p>
             <div class="cta-actions fade-in">
-              <Button href="/contact" size="large">Schedule Free Consultation</Button>
-              <Button href="/testimonials" variant="secondary" size="large">Read More Success Stories</Button>
+              <Button href="/contact" size="large">{t('benefits.cta.primaryBtn')}</Button>
+              <Button href="/testimonials" variant="secondary" size="large">{t('benefits.cta.secondaryBtn')}</Button>
             </div>
           </div>
         </div>

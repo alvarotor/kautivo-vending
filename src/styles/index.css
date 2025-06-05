@@ -357,6 +357,24 @@ p {
   transition: all 0.3s ease;
 }
 
+.language-toggle {
+  background: var(--color-light-gray);
+  border: 2px solid var(--color-sage);
+  color: var(--color-sage);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 48px;
+}
+
+.language-toggle:hover {
+  background: var(--color-sage);
+  color: var(--color-white);
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 2.5rem;

@@ -1,15 +1,17 @@
 import { ContactForm } from '../components/ContactForm'
+import { useI18n } from '../utils/i18n'
 
 export function Contact() {
+  const { t } = useI18n()
+  
   return (
     <div class="contact">
       <section class="hero-section section">
         <div class="container">
           <div class="text-center">
-            <h1 class="fade-in">Get Your Free Consultation</h1>
+            <h1 class="fade-in">{t('contact.hero.title')}</h1>
             <p class="text-large fade-in">
-              Ready to transform your wellness facility with smart vending solutions? 
-              Let's discuss your specific needs and create a customized plan.
+              {t('contact.hero.subtitle')}
             </p>
           </div>
         </div>
@@ -19,59 +21,59 @@ export function Contact() {
         <div class="container">
           <div class="contact-content">
             <div class="contact-info fade-in">
-              <h2>Why Choose a Free Consultation?</h2>
+              <h2>{t('contact.whyConsultation.title')}</h2>
               <div class="benefits-list">
                 <div class="benefit-item">
                   <div class="benefit-icon">🎯</div>
                   <div class="benefit-text">
-                    <h4>Customized Assessment</h4>
-                    <p>We analyze your facility's unique layout, traffic patterns, and member demographics</p>
+                    <h4>{t('contact.whyConsultation.assessment.title')}</h4>
+                    <p>{t('contact.whyConsultation.assessment.description')}</p>
                   </div>
                 </div>
                 
                 <div class="benefit-item">
                   <div class="benefit-icon">💰</div>
                   <div class="benefit-text">
-                    <h4>ROI Projections</h4>
-                    <p>Get detailed revenue projections based on your specific facility metrics</p>
+                    <h4>{t('contact.whyConsultation.roi.title')}</h4>
+                    <p>{t('contact.whyConsultation.roi.description')}</p>
                   </div>
                 </div>
                 
                 <div class="benefit-item">
                   <div class="benefit-icon">🔧</div>
                   <div class="benefit-text">
-                    <h4>Implementation Planning</h4>
-                    <p>Receive a complete roadmap for installation and product curation</p>
+                    <h4>{t('contact.whyConsultation.planning.title')}</h4>
+                    <p>{t('contact.whyConsultation.planning.description')}</p>
                   </div>
                 </div>
                 
                 <div class="benefit-item">
                   <div class="benefit-icon">📊</div>
                   <div class="benefit-text">
-                    <h4>No Obligation</h4>
-                    <p>Get expert insights and recommendations with no pressure to commit</p>
+                    <h4>{t('contact.whyConsultation.noObligation.title')}</h4>
+                    <p>{t('contact.whyConsultation.noObligation.description')}</p>
                   </div>
                 </div>
               </div>
 
               <div class="contact-details">
-                <h3>Get in Touch Directly</h3>
+                <h3>{t('contact.contactMethods.title')}</h3>
                 <div class="contact-methods">
                   <div class="contact-method">
-                    <strong>📧 Email:</strong>
+                    <strong>{t('contact.contactMethods.email')}</strong>
                     <a href="mailto:info@kautivo.com">info@kautivo.com</a>
                   </div>
                   <div class="contact-method">
-                    <strong>📞 Phone:</strong>
+                    <strong>{t('contact.contactMethods.phone')}</strong>
                     <a href="tel:+15551234567">+1 (555) 123-4567</a>
                   </div>
                   <div class="contact-method">
-                    <strong>🕒 Hours:</strong>
-                    <span>Monday-Friday 9AM-6PM EST</span>
+                    <strong>{t('contact.contactMethods.hours')}</strong>
+                    <span>{t('contact.contactMethods.hoursValue')}</span>
                   </div>
                   <div class="contact-method">
-                    <strong>⚡ Response Time:</strong>
-                    <span>Within 24 hours</span>
+                    <strong>{t('contact.contactMethods.responseTime')}</strong>
+                    <span>{t('contact.contactMethods.responseValue')}</span>
                   </div>
                 </div>
               </div>
@@ -87,44 +89,44 @@ export function Contact() {
       <section class="process-section section">
         <div class="container">
           <div class="text-center">
-            <h2 class="fade-in">Our Consultation Process</h2>
-            <p class="fade-in">A simple, transparent process designed around your schedule</p>
+            <h2 class="fade-in">{t('contact.process.title')}</h2>
+            <p class="fade-in">{t('contact.process.subtitle')}</p>
           </div>
           
           <div class="process-steps fade-in">
             <div class="process-step">
               <div class="step-number">1</div>
               <div class="step-content">
-                <h3>Initial Contact</h3>
-                <p>Submit your information and we'll reach out within 24 hours to schedule your consultation</p>
-                <span class="step-duration">Same day response</span>
+                <h3>{t('contact.process.step1.title')}</h3>
+                <p>{t('contact.process.step1.description')}</p>
+                <span class="step-duration">{t('contact.process.step1.duration')}</span>
               </div>
             </div>
             
             <div class="process-step">
               <div class="step-number">2</div>
               <div class="step-content">
-                <h3>Facility Assessment</h3>
-                <p>30-minute video call or in-person visit to understand your space, members, and goals</p>
-                <span class="step-duration">30-45 minutes</span>
+                <h3>{t('contact.process.step2.title')}</h3>
+                <p>{t('contact.process.step2.description')}</p>
+                <span class="step-duration">{t('contact.process.step2.duration')}</span>
               </div>
             </div>
             
             <div class="process-step">
               <div class="step-number">3</div>
               <div class="step-content">
-                <h3>Custom Proposal</h3>
-                <p>Detailed recommendation with ROI projections, product selection, and implementation timeline</p>
-                <span class="step-duration">3-5 business days</span>
+                <h3>{t('contact.process.step3.title')}</h3>
+                <p>{t('contact.process.step3.description')}</p>
+                <span class="step-duration">{t('contact.process.step3.duration')}</span>
               </div>
             </div>
             
             <div class="process-step">
               <div class="step-number">4</div>
               <div class="step-content">
-                <h3>Decision & Setup</h3>
-                <p>If you choose to proceed, we handle everything from installation to initial stocking</p>
-                <span class="step-duration">2-3 weeks</span>
+                <h3>{t('contact.process.step4.title')}</h3>
+                <p>{t('contact.process.step4.description')}</p>
+                <span class="step-duration">{t('contact.process.step4.duration')}</span>
               </div>
             </div>
           </div>
@@ -134,38 +136,38 @@ export function Contact() {
       <section class="faq-section section section-alt">
         <div class="container">
           <div class="text-center">
-            <h2 class="fade-in">Frequently Asked Questions</h2>
+            <h2 class="fade-in">{t('contact.faq.title')}</h2>
           </div>
           
           <div class="faq-grid fade-in">
             <div class="faq-item">
-              <h4>What does the consultation include?</h4>
-              <p>A comprehensive facility assessment, member demographic analysis, ROI projections, product recommendations, and a detailed implementation plan.</p>
+              <h4>{t('contact.faq.q1.question')}</h4>
+              <p>{t('contact.faq.q1.answer')}</p>
             </div>
             
             <div class="faq-item">
-              <h4>Is there really no cost or obligation?</h4>
-              <p>Absolutely none. We believe in demonstrating value first. You'll receive actionable insights regardless of whether you choose to work with us.</p>
+              <h4>{t('contact.faq.q2.question')}</h4>
+              <p>{t('contact.faq.q2.answer')}</p>
             </div>
             
             <div class="faq-item">
-              <h4>How long before I see ROI?</h4>
-              <p>Most facilities see positive cash flow within 2-3 months and full ROI within 8-14 months, depending on size and traffic.</p>
+              <h4>{t('contact.faq.q3.question')}</h4>
+              <p>{t('contact.faq.q3.answer')}</p>
             </div>
             
             <div class="faq-item">
-              <h4>What ongoing support do you provide?</h4>
-              <p>Complete ongoing support including restocking, maintenance, analytics reporting, and 24/7 technical support.</p>
+              <h4>{t('contact.faq.q4.question')}</h4>
+              <p>{t('contact.faq.q4.answer')}</p>
             </div>
             
             <div class="faq-item">
-              <h4>Can you work with existing contracts?</h4>
-              <p>Yes, we can often work around existing vending contracts or help you transition when contracts expire.</p>
+              <h4>{t('contact.faq.q5.question')}</h4>
+              <p>{t('contact.faq.q5.answer')}</p>
             </div>
             
             <div class="faq-item">
-              <h4>What if my facility is too small?</h4>
-              <p>We work with facilities of all sizes. Even smaller studios can benefit from our compact models and flexible arrangements.</p>
+              <h4>{t('contact.faq.q6.question')}</h4>
+              <p>{t('contact.faq.q6.answer')}</p>
             </div>
           </div>
         </div>
