@@ -3,7 +3,7 @@ import preact from '@preact/preset-vite'
 
 export default defineConfig({
   plugins: [preact()],
-  base: '/',
+  base: process.env.NODE_ENV === 'production' ? '/kautivo-vending/' : '/',
   build: {
     outDir: 'dist',
     sourcemap: true
