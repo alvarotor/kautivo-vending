@@ -1,0 +1,134 @@
+[
+  {
+    "id": "elite-fitness",
+    "name": "Sarah Mitchell",
+    "title": "Owner",
+    "company": "Elite Fitness Center",
+    "location": "Austin, TX",
+    "facilityType": "Premium Gym",
+    "memberCount": "2,500+ members",
+    "monthlyRevenue": "$6,800",
+    "paybackPeriod": "11 months",
+    "quote": "The Kautivo vending machine has been a complete game-changer for our facility. Our members absolutely love the convenience of grabbing high-quality protein bars and recovery drinks right after their workouts. We're generating nearly $7,000 in additional monthly revenue with literally zero effort on our part. The machine is beautiful, reliable, and perfectly matches our premium brand aesthetic.",
+    "highlights": [
+      "Increased member satisfaction scores by 23%",
+      "Generated $81,600 in first year revenue",
+      "Zero staff time required for management",
+      "Perfect integration with facility design"
+    ],
+    "beforeAfter": {
+      "before": "No retail options for post-workout nutrition",
+      "after": "24/7 access to premium wellness products"
+    }
+  },
+  {
+    "id": "zen-wellness",
+    "name": "David Chen",
+    "title": "Spa Director",
+    "company": "Zen Wellness Spa",
+    "location": "San Francisco, CA",
+    "facilityType": "Luxury Spa",
+    "memberCount": "800 monthly clients",
+    "monthlyRevenue": "$3,200",
+    "paybackPeriod": "9 months",
+    "quote": "Our clients expect premium experiences in every aspect of their visit, and the Kautivo machine delivers exactly that. The sleek design fits perfectly in our serene environment, and the curated selection of wellness products extends our retail offerings beautifully. Clients often purchase supplements and aromatherapy products after their treatments, creating a seamless wellness journey.",
+    "highlights": [
+      "42% increase in total facility revenue",
+      "Enhanced client experience and satisfaction",
+      "Premium product selection aligns with spa values",
+      "Whisper-quiet operation maintains tranquil atmosphere"
+    ],
+    "beforeAfter": {
+      "before": "Limited retail space for wellness products",
+      "after": "Expanded product offering without additional staff"
+    }
+  },
+  {
+    "id": "crossfit-downtown",
+    "name": "Mike Rodriguez",
+    "title": "Co-Owner",
+    "company": "CrossFit Downtown",
+    "location": "Chicago, IL",
+    "facilityType": "CrossFit Box",
+    "memberCount": "450 members",
+    "monthlyRevenue": "$2,100",
+    "paybackPeriod": "14 months",
+    "quote": "Our CrossFit athletes burn through calories and need immediate post-workout nutrition. The Kautivo machine stocks exactly what they need - protein bars, BCAAs, and recovery drinks. The real-time analytics help us understand what products our athletes prefer most, and we've been able to optimize our inventory accordingly. It's like having a 24/7 nutrition store that runs itself.",
+    "highlights": [
+      "Popular with competitive athletes and weekend warriors",
+      "Analytics revealed unexpected product preferences",
+      "Reduced member complaints about nutrition options",
+      "Strong ROI despite smaller member base"
+    ],
+    "beforeAfter": {
+      "before": "Members had to leave facility for post-workout nutrition",
+      "after": "Complete nutrition solution on-site"
+    }
+  },
+  {
+    "id": "yoga-sanctuary",
+    "name": "Lisa Thompson",
+    "title": "Studio Owner",
+    "company": "Yoga Sanctuary",
+    "location": "Portland, OR",
+    "facilityType": "Yoga Studio",
+    "memberCount": "320 members",
+    "monthlyRevenue": "$1,800",
+    "paybackPeriod": "16 months",
+    "quote": "We were initially concerned about adding any technology to our peaceful space, but the Kautivo team worked with us to customize the machine to fit our aesthetic perfectly. The gentle lighting and silent operation maintain our studio's tranquil atmosphere. Our students love having access to organic energy bars and herbal teas, especially after our longer workshops and teacher trainings.",
+    "highlights": [
+      "Custom design integration with studio aesthetic",
+      "Organic and natural product focus",
+      "Popular during teacher training intensives",
+      "Enhanced student experience without disruption"
+    ],
+    "beforeAfter": {
+      "before": "No food or beverage options for long sessions",
+      "after": "Nourishing options that support practice"
+    }
+  },
+  {
+    "id": "corporate-wellness",
+    "name": "Jennifer Park",
+    "title": "Wellness Program Manager",
+    "company": "TechCorp Wellness Center",
+    "location": "Seattle, WA",
+    "facilityType": "Corporate Wellness",
+    "memberCount": "1,200 employees",
+    "monthlyRevenue": "$4,500",
+    "paybackPeriod": "8 months",
+    "quote": "Employee wellness is a top priority for our company, and the Kautivo machine perfectly supports our initiatives. Our employees appreciate having healthy snack and supplement options right in our wellness center. The machine's professional appearance and reliable operation align with our corporate standards, and the revenue helps offset our wellness program costs.",
+    "highlights": [
+      "Supports corporate wellness initiatives",
+      "Professional appearance fits corporate environment",
+      "Revenue helps fund additional wellness programs",
+      "High employee satisfaction and usage rates"
+    ],
+    "beforeAfter": {
+      "before": "Limited healthy options in company cafeteria",
+      "after": "Dedicated wellness nutrition hub"
+    }
+  },
+  {
+    "id": "aquatic-center",
+    "name": "Robert Kim",
+    "title": "Facility Manager",
+    "company": "City Aquatic Center",
+    "location": "Miami, FL",
+    "facilityType": "Swimming Pool",
+    "memberCount": "600 daily visitors",
+    "monthlyRevenue": "$2,900",
+    "paybackPeriod": "12 months",
+    "quote": "Swimmers and water aerobics participants often work up quite an appetite, but we never had good options for post-swim nutrition. The Kautivo machine solved this perfectly with waterproof protein bars, electrolyte drinks, and healthy snacks. The machine's humidity-resistant design works great in our pool environment, and maintenance has been virtually non-existent.",
+    "highlights": [
+      "Humidity-resistant design perfect for pool environment",
+      "Popular with competitive swimmers and casual users",
+      "Minimal maintenance despite challenging environment",
+      "Improved overall visitor satisfaction"
+    ],
+    "beforeAfter": {
+      "before": "Swimmers left hungry after training sessions",
+      "after": "Complete post-swim nutrition solution"
+    }
+  }
+]

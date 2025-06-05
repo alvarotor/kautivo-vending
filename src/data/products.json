@@ -1,0 +1,75 @@
+[
+  {
+    "id": "wellness-pro",
+    "name": "Wellness Pro",
+    "description": "Our flagship model designed for premium fitness centers and wellness facilities",
+    "features": [
+      "55-inch 4K touchscreen display",
+      "120 product capacity with adjustable shelving",
+      "Dual temperature zones (refrigerated & ambient)",
+      "Contactless payment (NFC, mobile wallets)",
+      "Real-time inventory tracking",
+      "Remote monitoring and analytics",
+      "ADA compliant design",
+      "Energy Star certified",
+      "Custom branding options"
+    ],
+    "specifications": {
+      "dimensions": "72\" H x 39\" W x 32\" D",
+      "weight": "850 lbs",
+      "power": "115V, 12A",
+      "capacity": "120 products",
+      "temperature": "32-38°F (refrigerated), 65-75°F (ambient)"
+    },
+    "price": "Starting at $8,500",
+    "ideal_for": ["Large fitness centers", "Premium spas", "Corporate wellness centers"]
+  },
+  {
+    "id": "fitness-compact",
+    "name": "Fitness Compact",
+    "description": "Space-efficient solution perfect for boutique studios and smaller facilities",
+    "features": [
+      "32-inch HD touchscreen",
+      "60 product capacity",
+      "Single temperature zone (refrigerated or ambient)",
+      "Contactless payment support",
+      "Mobile app integration",
+      "Compact footprint",
+      "Energy efficient design",
+      "Custom wrap options"
+    ],
+    "specifications": {
+      "dimensions": "60\" H x 32\" W x 28\" D",
+      "weight": "550 lbs",
+      "power": "115V, 8A",
+      "capacity": "60 products",
+      "temperature": "32-38°F or 65-75°F"
+    },
+    "price": "Starting at $5,500",
+    "ideal_for": ["Boutique fitness studios", "Yoga centers", "Small gyms"]
+  },
+  {
+    "id": "spa-luxury",
+    "name": "Spa Luxury",
+    "description": "Elegant design with premium finishes for high-end wellness environments",
+    "features": [
+      "Tempered glass front with LED lighting",
+      "Whisper-quiet operation",
+      "Premium product display",
+      "Biometric payment options",
+      "Ambient lighting customization",
+      "Luxury product compatibility",
+      "Silent operation mode",
+      "Premium materials and finishes"
+    ],
+    "specifications": {
+      "dimensions": "68\" H x 36\" W x 30\" D",
+      "weight": "750 lbs",
+      "power": "115V, 10A",
+      "capacity": "80 products",
+      "temperature": "Ambient only (65-75°F)"
+    },
+    "price": "Starting at $12,000",
+    "ideal_for": ["Luxury spas", "High-end wellness centers", "Resort facilities"]
+  }
+]
