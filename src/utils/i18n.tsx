@@ -3,7 +3,6 @@ import { useContext, useState, useEffect } from 'preact/hooks'
 import translations from '../data/translations.json'
 
 type Language = 'en' | 'es'
-type Translations = typeof translations
 
 interface I18nContextType {
   language: Language

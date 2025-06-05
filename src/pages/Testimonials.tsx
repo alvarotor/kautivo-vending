@@ -16,7 +16,7 @@ export function Testimonials() {
     const testimonialKey = testimonialId.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase())
     
     try {
-      const testimonialTranslations = translations[language]?.testimonials?.testimonialData?.[testimonialKey]
+      const testimonialTranslations = (translations as any)[language]?.testimonials?.testimonialData?.[testimonialKey]
       
       if (testimonialTranslations && typeof testimonialTranslations === 'object') {
         return {
@@ -187,7 +187,7 @@ export function Testimonials() {
             <div class="success-highlights">
               <h4>{t('testimonials.featuredStory.keyFactors')}</h4>
               <ul>
-                {selectedTestimonial.highlights.map((highlight, index) => (
+                {selectedTestimonial.highlights.map((highlight: string, index: number) => (
                   <li key={index}>{highlight}</li>
                 ))}
               </ul>

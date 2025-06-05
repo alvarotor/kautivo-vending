@@ -15,7 +15,7 @@ export function Products() {
     const productKey = productId.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase())
     
     try {
-      const productTranslations = translations[language]?.products?.productData?.[productKey]
+      const productTranslations = (translations as any)[language]?.products?.productData?.[productKey]
       
       if (productTranslations && typeof productTranslations === 'object') {
         return {
@@ -81,7 +81,7 @@ export function Products() {
                 <div class="ideal-for">
                   <h4>{t('products.labels.idealFor')}</h4>
                   <ul>
-                    {selectedProduct.ideal_for.map((use, index) => (
+                    {selectedProduct.ideal_for.map((use: string, index: number) => (
                       <li key={index}>{use}</li>
                     ))}
                   </ul>
@@ -98,7 +98,7 @@ export function Products() {
               <div class="features-section">
                 <h3>{t('products.labels.keyFeatures')}</h3>
                 <ul class="features-list">
-                  {selectedProduct.features.map((feature, index) => (
+                  {selectedProduct.features.map((feature: string, index: number) => (
                     <li key={index}>{feature}</li>
                   ))}
                 </ul>
@@ -179,36 +179,36 @@ export function Products() {
             
             <div class="comparison-row">
               <div class="feature-name">{t('products.comparison.screenSize')}</div>
-              {translations[language]?.products?.comparison?.values?.screenSizes?.map((size, index) => (
+              {(translations as any)[language]?.products?.comparison?.values?.screenSizes?.map((size: string, index: number) => (
                 <div key={index} class="feature-value">{size}</div>
-              )) || ['55" 4K', '32" HD', '36" Premium'].map((size, index) => (
+              )) || ['55" 4K', '32" HD', '36" Premium'].map((size: string, index: number) => (
                 <div key={index} class="feature-value">{size}</div>
               ))}
             </div>
             
             <div class="comparison-row">
               <div class="feature-name">{t('products.comparison.capacity')}</div>
-              {translations[language]?.products?.comparison?.values?.capacities?.map((capacity, index) => (
+              {(translations as any)[language]?.products?.comparison?.values?.capacities?.map((capacity: string, index: number) => (
                 <div key={index} class="feature-value">{capacity}</div>
-              )) || ['120 products', '60 products', '80 products'].map((capacity, index) => (
+              )) || ['120 products', '60 products', '80 products'].map((capacity: string, index: number) => (
                 <div key={index} class="feature-value">{capacity}</div>
               ))}
             </div>
             
             <div class="comparison-row">
               <div class="feature-name">{t('products.comparison.temperatureZones')}</div>
-              {translations[language]?.products?.comparison?.values?.temperatureZones?.map((zone, index) => (
+              {(translations as any)[language]?.products?.comparison?.values?.temperatureZones?.map((zone: string, index: number) => (
                 <div key={index} class="feature-value">{zone}</div>
-              )) || ['Dual', 'Single', 'Ambient'].map((zone, index) => (
+              )) || ['Dual', 'Single', 'Ambient'].map((zone: string, index: number) => (
                 <div key={index} class="feature-value">{zone}</div>
               ))}
             </div>
             
             <div class="comparison-row">
               <div class="feature-name">{t('products.comparison.startingPrice')}</div>
-              {translations[language]?.products?.comparison?.values?.prices?.map((price, index) => (
+              {(translations as any)[language]?.products?.comparison?.values?.prices?.map((price: string, index: number) => (
                 <div key={index} class="feature-value">{price}</div>
-              )) || ['$8,500', '$5,500', '$12,000'].map((price, index) => (
+              )) || ['$8,500', '$5,500', '$12,000'].map((price: string, index: number) => (
                 <div key={index} class="feature-value">{price}</div>
               ))}
             </div>
