@@ -53,7 +53,7 @@ export function SEOHead({
             telephone: "+1-555-123-4567",
             contactType: "customer service",
             email: "info@kautivo.com",
-            availableLanguage: ["English", "Spanish", "French", "German"]
+            availableLanguage: ["English", "Spanish"]
           },
           address: {
             "@type": "PostalAddress",
