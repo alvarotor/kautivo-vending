@@ -3,6 +3,10 @@ export function initializeAnimations() {
   const heroElements = document.querySelectorAll('.hero .fade-in')
   heroElements.forEach(el => {
     el.classList.add('visible')
+    // Force immediate visibility
+    const element = el as HTMLElement
+    element.style.opacity = '1'
+    element.style.transform = 'translateY(0)'
   })
 
   const observerOptions = {
