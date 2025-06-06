@@ -1,12 +1,24 @@
 export function initializeAnimations() {
-  // Immediately show hero content to prevent blank page
+  // Handle hero animations with staggered delay
   const heroElements = document.querySelectorAll('.hero .fade-in')
-  heroElements.forEach(el => {
-    el.classList.add('visible')
-    // Force immediate visibility
+  heroElements.forEach((el, index) => {
     const element = el as HTMLElement
+    // Ensure immediate visibility first
     element.style.opacity = '1'
     element.style.transform = 'translateY(0)'
+    
+    // Add animation with delay after a short timeout
+    setTimeout(() => {
+      element.style.opacity = '0'
+      element.style.transform = 'translateY(30px)'
+      element.classList.add('animate')
+      
+      setTimeout(() => {
+        element.style.opacity = '1'
+        element.style.transform = 'translateY(0)'
+        element.classList.add('visible')
+      }, 100 + (index * 200))
+    }, 300)
   })
 
   const observerOptions = {

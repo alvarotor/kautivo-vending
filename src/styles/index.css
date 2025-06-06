@@ -179,11 +179,27 @@ p {
   transform: translateY(0);
 }
 
-/* Ensure home page hero content is visible immediately */
+/* Ensure home page hero content starts visible but can animate */
 .hero .fade-in {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-  transition: none !important;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+}
+
+/* When hero animations are initialized, allow them to animate */
+.hero .fade-in.animate {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Show content by default if JavaScript doesn't load */

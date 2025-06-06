@@ -90,7 +90,7 @@ export function ROICalculator() {
   }
 
   return (
-    <div class="roi-calculator">
+    <div class="roi-calculator fade-in">
       <div class="calculator-form">
         <h3>{t('roiCalculator.title')}</h3>
         <form onSubmit={handleSubmit}>
