@@ -253,7 +253,7 @@ export function ContactForm() {
     return (
       <div class="contact-form">
         <div class="loading-state">
-          <div class="spinner"></div>
+          <div class="spinner" />
           <p>{t('contactForm.loadingForm') || 'Loading form configuration...'}</p>
         </div>
         

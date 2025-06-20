@@ -40,7 +40,7 @@ export function Stock() {
           <div class="stock-table-container fade-in">
             {loading && (
               <div class="loading-state">
-                <div class="spinner"></div>
+                <div class="spinner" />
                 <p>{t('stock.loading')}</p>
               </div>
             )}
