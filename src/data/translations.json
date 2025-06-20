@@ -4,6 +4,7 @@
       "home": "Home",
       "about": "About",
       "products": "Products",
+      "stock": "Stock",
       "benefits": "Benefits",
       "testimonials": "Testimonials",
       "contact": "Contact"
@@ -715,6 +716,18 @@
         ]
       }
     },
+    "stock": {
+      "hero": {
+        "title": "Stock Management",
+        "subtitle": "Real-time inventory data from our warehouse"
+      },
+      "loading": "Loading stock data...",
+      "error": "Failed to load stock data. Please try again later.",
+      "empty": "No stock data found.",
+      "table": {
+        "fallbackHeaders": ["Product", "Quantity", "Location"]
+      }
+    },
     "common": {
       "language": "Language"
     }
@@ -724,6 +737,7 @@
       "home": "Inicio",
       "about": "Acerca de",
       "products": "Productos",
+      "stock": "Inventario",
       "benefits": "Beneficios",
       "testimonials": "Testimonios",
       "contact": "Contacto"
@@ -1468,6 +1482,18 @@
           "Recibirás una llamada o email para programar tu consulta",
           "Proporcionaremos proyecciones de ROI específicas para tu instalación"
         ]
+      }
+    },
+    "stock": {
+      "hero": {
+        "title": "Gestión de Inventario",
+        "subtitle": "Datos de inventario en tiempo real desde nuestro almacén"
+      },
+      "loading": "Cargando datos de inventario...",
+      "error": "Error al cargar datos de inventario. Por favor, inténtalo de nuevo más tarde.",
+      "empty": "No se encontraron datos de inventario.",
+      "table": {
+        "fallbackHeaders": ["Producto", "Cantidad", "Ubicación"]
       }
     },
     "common": {
