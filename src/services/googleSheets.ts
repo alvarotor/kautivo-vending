@@ -108,6 +108,11 @@ async function getAccessToken(): Promise<string> {
 
 export async function fetchProductsFromGoogleSheets(): Promise<SheetsData> {
   try {
+    // Check if credentials are properly configured
+    if (!credentials.client_email || !credentials.private_key) {
+      throw new Error('Google Sheets credentials not configured properly. Please check your environment variables.')
+    }
+    
     // Get access token using service account
     console.log('Getting access token...')
     const accessToken = await getAccessToken()

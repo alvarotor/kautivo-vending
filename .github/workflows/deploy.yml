@@ -40,6 +40,14 @@ jobs:
     - name: Run linter  
       run: npm run lint
       
+    - name: Debug environment variables
+      run: |
+        echo "VITE_GOOGLE_CLIENT_EMAIL is set: $([[ -n "$VITE_GOOGLE_CLIENT_EMAIL" ]] && echo "yes" || echo "no")"
+        echo "VITE_GOOGLE_PRIVATE_KEY is set: $([[ -n "$VITE_GOOGLE_PRIVATE_KEY" ]] && echo "yes" || echo "no")"
+      env:
+        VITE_GOOGLE_CLIENT_EMAIL: ${{ secrets.VITE_GOOGLE_CLIENT_EMAIL }}
+        VITE_GOOGLE_PRIVATE_KEY: ${{ secrets.VITE_GOOGLE_PRIVATE_KEY }}
+        
     - name: Build project
       run: npm run build
       env:
