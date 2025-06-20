@@ -7,6 +7,11 @@ const credentials = {
   private_key: (import.meta.env.VITE_GOOGLE_PRIVATE_KEY || '').replace(/\\n/g, '\n')
 }
 
+// Validate credentials are set
+if (!credentials.client_email || !credentials.private_key) {
+  console.warn('Google Sheets credentials not configured. Set VITE_GOOGLE_CLIENT_EMAIL and VITE_GOOGLE_PRIVATE_KEY environment variables.')
+}
+
 export interface ProductRow {
   [key: string]: string
 }

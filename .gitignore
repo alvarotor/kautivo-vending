@@ -45,4 +45,4 @@ tmp/
 temp/
 
 # Credentials
-src/credentials/
+google-sheets-credentials.json
