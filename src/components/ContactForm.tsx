@@ -80,8 +80,8 @@ export function ContactForm() {
         setFormAddress(address)
       } catch (error) {
         console.error('Failed to load form address:', error)
-        // Fallback - you could set a default address here if needed
-        setFormAddress('')
+        // Fallback to a default form handler
+        setFormAddress('https://httpbin.org/post') // Temporary testing endpoint
       } finally {
         setIsLoadingAddress(false)
       }
@@ -253,6 +253,7 @@ export function ContactForm() {
     return (
       <div class="contact-form">
         <div class="loading-state">
+          <div class="spinner"></div>
           <p>{t('contactForm.loadingForm') || 'Loading form configuration...'}</p>
         </div>
         
@@ -268,6 +269,21 @@ export function ContactForm() {
             text-align: center;
             padding: var(--spacing-xl);
             color: var(--color-medium-gray);
+          }
+          
+          .spinner {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto var(--spacing-md) auto;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid var(--color-sage);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+          }
+          
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
           }
         `}</style>
       </div>
@@ -296,6 +312,7 @@ export function ContactForm() {
               name="fullName"
               value={formData.fullName}
               onChange={updateFormData('fullName')}
+              placeholder="e.g. John Smith"
               required
               error={errors.fullName}
             />
@@ -306,6 +323,7 @@ export function ContactForm() {
               name="email"
               value={formData.email}
               onChange={updateFormData('email')}
+              placeholder="your.email@company.com"
               required
               error={errors.email}
             />
@@ -326,6 +344,7 @@ export function ContactForm() {
               name="company"
               value={formData.company}
               onChange={updateFormData('company')}
+              placeholder="e.g. Fitness Plus Gym"
               required
               error={errors.company}
             />

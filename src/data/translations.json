@@ -683,6 +683,7 @@
         "evening": "Evening (5 PM - 8 PM)",
         "anytime": "Anytime"
       },
+      "loadingForm": "Loading form configuration...",
       "buttons": {
         "previous": "Previous",
         "nextStep": "Next Step",
@@ -701,6 +702,10 @@
         "contactMethodRequired": "Please select preferred contact method",
         "bestTimeRequired": "Please select best time to contact",
         "termsRequired": "You must agree to the terms to continue"
+      },
+      "errors": {
+        "noFormAddress": "Form submission address not configured. Please try again later.",
+        "submissionFailed": "Form submission failed. Please try again later."
       },
       "success": {
         "title": "Thank You for Your Interest!",
@@ -1451,6 +1456,7 @@
         "evening": "Noche (5 PM - 8 PM)",
         "anytime": "Cualquier momento"
       },
+      "loadingForm": "Cargando configuración del formulario...",
       "buttons": {
         "previous": "Anterior",
         "nextStep": "Siguiente Paso",
@@ -1469,6 +1475,10 @@
         "contactMethodRequired": "Por favor selecciona el método de contacto preferido",
         "bestTimeRequired": "Por favor selecciona el mejor momento para contactar",
         "termsRequired": "Debes aceptar los términos para continuar"
+      },
+      "errors": {
+        "noFormAddress": "Dirección de envío del formulario no configurada. Por favor intenta más tarde.",
+        "submissionFailed": "Falló el envío del formulario. Por favor intenta más tarde."
       },
       "success": {
         "title": "¡Gracias por Tu Interés!",

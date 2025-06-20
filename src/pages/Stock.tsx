@@ -40,6 +40,7 @@ export function Stock() {
           <div class="stock-table-container fade-in">
             {loading && (
               <div class="loading-state">
+                <div class="spinner"></div>
                 <p>{t('stock.loading')}</p>
               </div>
             )}
@@ -128,6 +129,21 @@ export function Stock() {
         .loading-state p {
           color: var(--color-medium-gray);
           font-size: 1.1rem;
+        }
+        
+        .spinner {
+          width: 40px;
+          height: 40px;
+          margin: 0 auto var(--spacing-md) auto;
+          border: 3px solid #f3f3f3;
+          border-top: 3px solid var(--color-sage);
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
         }
         
         .error-state p {
