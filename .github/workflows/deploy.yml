@@ -47,6 +47,7 @@ jobs:
       env:
         VITE_GOOGLE_CLIENT_EMAIL: ${{ secrets.VITE_GOOGLE_CLIENT_EMAIL }}
         VITE_GOOGLE_PRIVATE_KEY: ${{ secrets.VITE_GOOGLE_PRIVATE_KEY }}
+        VITE_GOOGLE_SPREADSHEET_ID: ${{ secrets.VITE_GOOGLE_SPREADSHEET_ID }}
         
     - name: Build project
       run: npm run build
@@ -54,6 +55,7 @@ jobs:
         NODE_ENV: production
         VITE_GOOGLE_CLIENT_EMAIL: ${{ secrets.VITE_GOOGLE_CLIENT_EMAIL }}
         VITE_GOOGLE_PRIVATE_KEY: ${{ secrets.VITE_GOOGLE_PRIVATE_KEY }}
+        VITE_GOOGLE_SPREADSHEET_ID: ${{ secrets.VITE_GOOGLE_SPREADSHEET_ID }}
         
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4

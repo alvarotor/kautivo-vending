@@ -1,5 +1,5 @@
-// Real Google Sheets document ID
-const SPREADSHEET_ID = '1yRSLyAxVK44ECLKdxkdS-wAgi13gFlYqh4WBBMvNmLE'
+// Google Sheets document ID from environment variable
+const SPREADSHEET_ID = import.meta.env.VITE_GOOGLE_SPREADSHEET_ID || '1yRSLyAxVK44ECLKdxkdS-wAgi13gFlYqh4WBBMvNmLE'
 
 // Service Account credentials from environment variables
 const credentials = {
