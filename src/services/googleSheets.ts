@@ -106,6 +106,56 @@ async function getAccessToken(): Promise<string> {
   return data.access_token
 }
 
+export async function fetchFormAddressFromGoogleSheets(): Promise<string> {
+  try {
+    // Check if credentials are properly configured
+    if (!credentials.client_email || !credentials.private_key) {
+      throw new Error('Google Sheets credentials not configured properly. Please check your environment variables.')
+    }
+    
+    // Get access token using service account
+    console.log('Getting access token for form address...')
+    const accessToken = await getAccessToken()
+    console.log('Access token obtained successfully')
+    
+    // Use Google Sheets API v4 to get Configuration sheet A2 cell
+    const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/Configuration!A2`
+    console.log('Fetching form address from URL:', apiUrl)
+    
+    const response = await fetch(apiUrl, {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        'Content-Type': 'application/json'
+      }
+    })
+    
+    console.log('Response status:', response.status)
+    
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}))
+      console.error('API Error:', errorData)
+      throw new Error(`HTTP error! status: ${response.status} - ${errorData.error?.message || 'Unknown error'}`)
+    }
+
+    const data = await response.json()
+    const values = data.values || []
+    
+    console.log('Successfully fetched form address data:', data)
+    
+    if (values.length === 0 || !values[0] || !values[0][0]) {
+      throw new Error('Form address not found in Configuration sheet A2')
+    }
+    
+    const formAddress = values[0][0] as string
+    console.log('Form address:', formAddress)
+    return formAddress
+    
+  } catch (error) {
+    console.error('Error in fetchFormAddressFromGoogleSheets:', error)
+    throw error
+  }
+}
+
 export async function fetchProductsFromGoogleSheets(): Promise<SheetsData> {
   try {
     // Check if credentials are properly configured

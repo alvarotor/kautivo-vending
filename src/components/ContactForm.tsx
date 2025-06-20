@@ -1,7 +1,8 @@
-import { useState } from 'preact/hooks'
+import { useState, useEffect } from 'preact/hooks'
 import { FormField } from './FormField'
 import { Button } from './Button'
 import { useI18n } from '../utils/i18n'
+import { fetchFormAddressFromGoogleSheets } from '../services/googleSheets'
 
 interface ContactFormData {
   fullName: string
@@ -36,6 +37,8 @@ export function ContactForm() {
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [formAddress, setFormAddress] = useState<string>('')
+  const [isLoadingAddress, setIsLoadingAddress] = useState(true)
 
   const businessTypes = [
     { value: 'fitness-center', label: t('contactForm.businessTypes.fitnessCenter') },
@@ -67,6 +70,25 @@ export function ContactForm() {
     { value: 'evening', label: t('contactForm.bestTimes.evening') },
     { value: 'anytime', label: t('contactForm.bestTimes.anytime') }
   ]
+
+  // Fetch form address from Google Sheets on component mount
+  useEffect(() => {
+    const loadFormAddress = async () => {
+      try {
+        setIsLoadingAddress(true)
+        const address = await fetchFormAddressFromGoogleSheets()
+        setFormAddress(address)
+      } catch (error) {
+        console.error('Failed to load form address:', error)
+        // Fallback - you could set a default address here if needed
+        setFormAddress('')
+      } finally {
+        setIsLoadingAddress(false)
+      }
+    }
+
+    loadFormAddress()
+  }, [])
 
   const updateFormData = (field: keyof ContactFormData) => (value: string | boolean) => {
     setFormData(prev => ({ ...prev, [field]: value }))
@@ -117,14 +139,32 @@ export function ContactForm() {
     
     if (!validateStep(3)) return
 
+    if (!formAddress) {
+      console.error('Form address not available')
+      alert(t('contactForm.errors.noFormAddress') || 'Form submission address not configured. Please try again later.')
+      return
+    }
+
     setIsSubmitting(true)
     
     try {
-      // Simulate form submission (would integrate with Netlify Forms or similar)
-      await new Promise(resolve => setTimeout(resolve, 2000))
+      // Submit form data to the configured address
+      const response = await fetch(formAddress, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      })
+
+      if (!response.ok) {
+        throw new Error(`Form submission failed: ${response.status}`)
+      }
+
       setIsSubmitted(true)
     } catch (error) {
       console.error('Form submission error:', error)
+      alert(t('contactForm.errors.submissionFailed') || 'Form submission failed. Please try again later.')
     } finally {
       setIsSubmitting(false)
     }
@@ -203,6 +243,31 @@ export function ContactForm() {
             content: "→ ";
             color: var(--color-sage);
             font-weight: bold;
+          }
+        `}</style>
+      </div>
+    )
+  }
+
+  if (isLoadingAddress) {
+    return (
+      <div class="contact-form">
+        <div class="loading-state">
+          <p>{t('contactForm.loadingForm') || 'Loading form configuration...'}</p>
+        </div>
+        
+        <style jsx>{`
+          .contact-form {
+            background: var(--color-white);
+            border-radius: var(--border-radius-large);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-light);
+          }
+          
+          .loading-state {
+            text-align: center;
+            padding: var(--spacing-xl);
+            color: var(--color-medium-gray);
           }
         `}</style>
       </div>
