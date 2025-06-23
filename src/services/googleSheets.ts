@@ -106,6 +106,54 @@ async function getAccessToken(): Promise<string> {
   return data.access_token
 }
 
+export async function checkIfFormIsOpen(): Promise<boolean> {
+  try {
+    // Check if credentials are properly configured
+    if (!credentials.client_email || !credentials.private_key) {
+      console.warn('Google Sheets credentials not configured properly. Assuming form is closed.')
+      return false
+    }
+    
+    // Get access token using service account
+    console.log('Getting access token to check form status...')
+    const accessToken = await getAccessToken()
+    console.log('Access token obtained successfully')
+    
+    // Use Google Sheets API v4 to get Configuration sheet B1 cell
+    const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/Configuration!B1`
+    console.log('Checking form status from URL:', apiUrl)
+    
+    const response = await fetch(apiUrl, {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        'Content-Type': 'application/json'
+      }
+    })
+    
+    console.log('Response status:', response.status)
+    
+    if (!response.ok) {
+      console.error('Failed to check form status, assuming closed')
+      return false
+    }
+
+    const data = await response.json()
+    const values = data.values || []
+    
+    console.log('Form status check data:', data)
+    
+    // If B1 is empty or doesn't exist, form is closed
+    const isOpen = values.length > 0 && values[0] && values[0][0] && values[0][0].trim() !== ''
+    console.log('Form is open:', isOpen)
+    
+    return isOpen
+    
+  } catch (error) {
+    console.error('Error checking if form is open:', error)
+    return false // Default to closed if there's an error
+  }
+}
+
 export async function fetchFormAddressFromGoogleSheets(): Promise<string> {
   try {
     // Check if credentials are properly configured

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'preact/hooks'
 import { FormField } from './FormField'
 import { Button } from './Button'
 import { useI18n } from '../utils/i18n'
-import { fetchFormAddressFromGoogleSheets } from '../services/googleSheets'
+import { fetchFormAddressFromGoogleSheets, checkIfFormIsOpen } from '../services/googleSheets'
 
 interface ContactFormData {
   fullName: string
@@ -39,6 +39,7 @@ export function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [formAddress, setFormAddress] = useState<string>('')
   const [isLoadingAddress, setIsLoadingAddress] = useState(true)
+  const [isFormOpen, setIsFormOpen] = useState<boolean>(true)
 
   const businessTypes = [
     { value: 'fitness-center', label: t('contactForm.businessTypes.fitnessCenter') },
@@ -71,23 +72,31 @@ export function ContactForm() {
     { value: 'anytime', label: t('contactForm.bestTimes.anytime') }
   ]
 
-  // Fetch form address from Google Sheets on component mount
+  // Check if form is open and fetch form address from Google Sheets on component mount
   useEffect(() => {
-    const loadFormAddress = async () => {
+    const loadFormConfiguration = async () => {
       try {
         setIsLoadingAddress(true)
-        const address = await fetchFormAddressFromGoogleSheets()
-        setFormAddress(address)
+        
+        // First check if the form is open (B1 cell has content)
+        const formOpen = await checkIfFormIsOpen()
+        setIsFormOpen(formOpen)
+        
+        if (formOpen) {
+          // Only fetch the form address if the form is open
+          const address = await fetchFormAddressFromGoogleSheets()
+          setFormAddress(address)
+        }
       } catch (error) {
-        console.error('Failed to load form address:', error)
-        // Fallback to a default form handler
-        setFormAddress('https://httpbin.org/post') // Temporary testing endpoint
+        console.error('Failed to load form configuration:', error)
+        // If there's an error checking form status, assume it's closed
+        setIsFormOpen(false)
       } finally {
         setIsLoadingAddress(false)
       }
     }
 
-    loadFormAddress()
+    loadFormConfiguration()
   }, [])
 
   const updateFormData = (field: keyof ContactFormData) => (value: string | boolean) => {
@@ -284,6 +293,52 @@ export function ContactForm() {
           @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
+          }
+        `}</style>
+      </div>
+    )
+  }
+
+  if (!isFormOpen) {
+    return (
+      <div class="contact-form">
+        <div class="form-closed">
+          <div class="closed-icon">🚫</div>
+          <h3>{t('contactForm.formClosed')}</h3>
+          <p>
+            {t('contact.contactMethods.responseTime')} {t('contact.contactMethods.responseValue')}
+          </p>
+        </div>
+        
+        <style jsx>{`
+          .contact-form {
+            background: var(--color-white);
+            border-radius: var(--border-radius-large);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-light);
+          }
+          
+          .form-closed {
+            text-align: center;
+            padding: var(--spacing-xl);
+            color: var(--color-medium-gray);
+          }
+          
+          .closed-icon {
+            font-size: 4rem;
+            margin-bottom: var(--spacing-lg);
+          }
+          
+          .form-closed h3 {
+            color: var(--color-sage);
+            margin-bottom: var(--spacing-md);
+          }
+          
+          .form-closed p {
+            background: var(--color-light-gray);
+            padding: var(--spacing-md);
+            border-radius: var(--border-radius);
+            margin-top: var(--spacing-lg);
           }
         `}</style>
       </div>

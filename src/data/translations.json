@@ -684,6 +684,7 @@
         "anytime": "Anytime"
       },
       "loadingForm": "Loading form configuration...",
+      "formClosed": "We are not open at the moment.",
       "buttons": {
         "previous": "Previous",
         "nextStep": "Next Step",
@@ -1457,6 +1458,7 @@
         "anytime": "Cualquier momento"
       },
       "loadingForm": "Cargando configuración del formulario...",
+      "formClosed": "No estamos abiertos en este momento.",
       "buttons": {
         "previous": "Anterior",
         "nextStep": "Siguiente Paso",
