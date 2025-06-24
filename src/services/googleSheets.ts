@@ -166,8 +166,8 @@ export async function fetchFormAddressFromGoogleSheets(): Promise<string> {
     const accessToken = await getAccessToken()
     console.log('Access token obtained successfully')
     
-    // Use Google Sheets API v4 to get Configuration sheet B1 cell
-    const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/Configuration!B1`
+    // Use Google Sheets API v4 to get Configuration sheet B1 and C1 cells
+    const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/Configuration!B1:C1`
     console.log('Fetching form address from URL:', apiUrl)
     
     const response = await fetch(apiUrl, {
@@ -194,15 +194,18 @@ export async function fetchFormAddressFromGoogleSheets(): Promise<string> {
     if (values.length > 0) {
       console.log('First row:', values[0])
       console.log('B1 cell content:', values[0] ? values[0][0] : 'undefined')
+      console.log('C1 cell content:', values[0] ? values[0][1] : 'undefined')
     }
     
     if (values.length === 0 || !values[0] || !values[0][0] || values[0][0].trim() === '') {
       throw new Error('Form address not found in Configuration sheet B1. Please add a URL in cell B1.')
     }
     
-    const formAddress = values[0][0] as string
+    const b1Value = values[0][0] as string
+    const c1Value = (values[0][1] as string) || ''
+    const formAddress = c1Value.trim() ? `${b1Value.trim()}/${c1Value.trim()}` : b1Value.trim()
     console.log('Form address:', formAddress)
-    return formAddress.trim()
+    return formAddress
     
   } catch (error) {
     console.error('Error in fetchFormAddressFromGoogleSheets:', error)
