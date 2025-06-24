@@ -46,3 +46,4 @@ temp/
 
 # Credentials
 google-sheets-credentials.json
+n8n_data/*
