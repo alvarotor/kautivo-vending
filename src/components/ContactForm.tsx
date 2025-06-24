@@ -157,11 +157,29 @@ export function ContactForm() {
     setIsSubmitting(true)
     
     try {
+      console.log('Submitting form data:', formData)
+      console.log('Submitting form formAddress:', formAddress)
       // Submit form data to the configured address
+const form = new FormData()
+      form.append('fullName', formData.fullName)
+      form.append('email', formData.email)
+      form.append('phone', formData.phone)
+      form.append('company', formData.company)
+      form.append('businessType', formData.businessType)
+      form.append('monthlyVisitors', formData.monthlyVisitors)
+      form.append('currentVending', formData.currentVending)
+      form.append('contactMethod', formData.contactMethod)
+      form.append('bestTime', formData.bestTime)
+      form.append('requirements', formData.requirements)
+
+      console.log('Submitting form data:', formData)
+      console.log('Form address:', formAddress)
+
       const response = await fetch(formAddress, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'ngrok-skip-browser-warning': 'true'
         },
         body: JSON.stringify(formData)
       })
