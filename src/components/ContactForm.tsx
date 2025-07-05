@@ -159,8 +159,9 @@ export function ContactForm() {
     try {
       console.log('Submitting form data:', formData)
       console.log('Submitting form formAddress:', formAddress)
+      
       // Submit form data to the configured address
-const form = new FormData()
+      const form = new FormData()
       form.append('fullName', formData.fullName)
       form.append('email', formData.email)
       form.append('phone', formData.phone)
@@ -181,7 +182,7 @@ const form = new FormData()
           'Content-Type': 'application/json',
           'ngrok-skip-browser-warning': 'true'
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(form)
       })
 
       if (!response.ok) {
