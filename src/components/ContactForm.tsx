@@ -22,16 +22,16 @@ export function ContactForm() {
   const { t } = useI18n()
   const [currentStep, setCurrentStep] = useState(1)
   const [formData, setFormData] = useState<ContactFormData>({
-    fullName: '',
-    email: '',
-    phone: '',
-    company: '',
-    businessType: '',
-    monthlyVisitors: '',
-    currentVending: '',
-    contactMethod: '',
-    bestTime: '',
-    requirements: '',
+    fullName: 'John Smith',
+    email: 'john.smith@testgym.com',
+    phone: '+1 (555) 123-4567',
+    company: 'Test Fitness Center',
+    businessType: 'fitness-center',
+    monthlyVisitors: '1000-2000',
+    currentVending: 'no',
+    contactMethod: 'email',
+    bestTime: 'morning',
+    requirements: 'Looking for smart vending machines with healthy snacks and supplements for our gym members.',
     termsAgreed: false
   })
   const [errors, setErrors] = useState<Record<string, string>>({})
