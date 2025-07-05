@@ -23,9 +23,9 @@ export function ContactForm() {
   const [currentStep, setCurrentStep] = useState(1)
   const [formData, setFormData] = useState<ContactFormData>({
     fullName: 'John Smith',
-    email: 'john.smith@testgym.com',
+    email: 'goodbytes23@gmail.com',
     phone: '+1 (555) 123-4567',
-    company: 'Test Fitness Center',
+    company: 'Ryanair',
     businessType: 'fitness-center',
     monthlyVisitors: '1000-2000',
     currentVending: 'no',
